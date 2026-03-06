@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cycle.vibed-lab.com/sitemap.xml
