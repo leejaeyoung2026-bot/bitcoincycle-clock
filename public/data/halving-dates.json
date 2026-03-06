@@ -1,0 +1,14 @@
+{
+  "halvings": [
+    { "number": 1, "date": "2012-11-28", "block": 210000, "reward": 25 },
+    { "number": 2, "date": "2016-07-09", "block": 420000, "reward": 12.5 },
+    { "number": 3, "date": "2020-05-11", "block": 630000, "reward": 6.25 },
+    { "number": 4, "date": "2024-04-19", "block": 840000, "reward": 3.125 }
+  ],
+  "nextHalving": {
+    "estimatedDate": "2028-03-15",
+    "block": 1050000,
+    "reward": 1.5625
+  },
+  "cycleLengthDays": 1460
+}

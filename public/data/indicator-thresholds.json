@@ -1,0 +1,50 @@
+{
+  "mvrv": {
+    "name": "MVRV Z-Score",
+    "key": "mvrv",
+    "unit": "",
+    "description": "Market Value to Realized Value Z-Score. Measures how far market cap deviates from realized cap.",
+    "zones": [
+      { "label": "Undervalued", "min": -999, "max": 0, "color": "var(--phase-accumulation)" },
+      { "label": "Fair Value", "min": 0, "max": 3, "color": "var(--gauge-mid)" },
+      { "label": "Overheated", "min": 3, "max": 7, "color": "var(--gauge-high)" },
+      { "label": "Extreme", "min": 7, "max": 999, "color": "var(--gauge-extreme)" }
+    ]
+  },
+  "piCycle": {
+    "name": "Pi Cycle Top",
+    "key": "piCycle",
+    "unit": "",
+    "description": "Ratio of 111-day MA to 350-day MA x2. When ratio approaches 1.0, historically signals cycle tops.",
+    "zones": [
+      { "label": "Cool", "min": 0, "max": 0.6, "color": "var(--phase-accumulation)" },
+      { "label": "Warming", "min": 0.6, "max": 0.85, "color": "var(--gauge-mid)" },
+      { "label": "Hot", "min": 0.85, "max": 0.95, "color": "var(--gauge-high)" },
+      { "label": "Top Signal", "min": 0.95, "max": 999, "color": "var(--gauge-extreme)" }
+    ]
+  },
+  "puellMultiple": {
+    "name": "Puell Multiple",
+    "key": "puellMultiple",
+    "unit": "x",
+    "description": "Daily coin issuance value vs 365-day average. High values signal miner profit-taking.",
+    "zones": [
+      { "label": "Undervalued", "min": 0, "max": 0.5, "color": "var(--phase-accumulation)" },
+      { "label": "Fair", "min": 0.5, "max": 1.2, "color": "var(--gauge-mid)" },
+      { "label": "Overheated", "min": 1.2, "max": 4, "color": "var(--gauge-high)" },
+      { "label": "Extreme", "min": 4, "max": 999, "color": "var(--gauge-extreme)" }
+    ]
+  },
+  "s2fDeviation": {
+    "name": "Stock-to-Flow Deviation",
+    "key": "s2fDeviation",
+    "unit": "%",
+    "description": "Current price deviation from Stock-to-Flow model price. Positive = above model.",
+    "zones": [
+      { "label": "Below Model", "min": -999, "max": -50, "color": "var(--phase-accumulation)" },
+      { "label": "Fair Range", "min": -50, "max": 100, "color": "var(--gauge-mid)" },
+      { "label": "Above Model", "min": 100, "max": 300, "color": "var(--gauge-high)" },
+      { "label": "Extreme", "min": 300, "max": 999, "color": "var(--gauge-extreme)" }
+    ]
+  }
+}
