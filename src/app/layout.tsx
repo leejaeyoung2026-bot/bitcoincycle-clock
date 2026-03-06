@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Serif_Display, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "@/components/ThemeProvider";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 
 const dmSerifDisplay = DM_Serif_Display({
   subsets: ["latin"],
@@ -101,9 +105,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6874320463657568"
           crossOrigin="anonymous"
         />
+        <JsonLd />
       </head>
       <body className="antialiased">
-        <main>{children}</main>
+        <ThemeProvider>
+          <Nav />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

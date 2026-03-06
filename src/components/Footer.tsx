@@ -1,0 +1,38 @@
+import Link from "next/link";
+import VibedLabLogo from "./VibedLabLogo";
+
+export default function Footer() {
+  return (
+    <footer
+      className="border-t px-4 py-8 mt-16 text-xs font-sans"
+      style={{ borderColor: "var(--border)", color: "var(--ink-muted)" }}
+    >
+      <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>
+          &copy; 2026 BitcoinCycle Clock &middot;{" "}
+          <span style={{ color: "var(--cycle-accent)" }}>cycle.vibed-lab.com</span>
+        </p>
+        <nav className="flex gap-4">
+          <Link href="/about" className="hover:opacity-100 opacity-60 transition-opacity">About</Link>
+          <Link href="/privacy" className="hover:opacity-100 opacity-60 transition-opacity">Privacy</Link>
+          <Link href="/contact" className="hover:opacity-100 opacity-60 transition-opacity">Contact</Link>
+          <Link href="/learn" className="hover:opacity-100 opacity-60 transition-opacity">Learn</Link>
+        </nav>
+      </div>
+      <p className="text-center mt-4 opacity-40">
+        Built by Jay, Bitcoin investor since 2017. Not financial advice.
+      </p>
+      <div className="text-center mt-4">
+        <a
+          href="https://vibed-lab.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block opacity-50 hover:opacity-100 transition-opacity"
+          aria-label="Vibed Lab"
+        >
+          <VibedLabLogo height={20} />
+        </a>
+      </div>
+    </footer>
+  );
+}
