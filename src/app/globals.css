@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #F5F1EB;
+  --ink: #2C2825;
+  --ink-muted: #9A9490;
+  --border: #E8E5E0;
+
+  --cycle-accent: #D4A574;
+  --cycle-accent-hover: #C08F5E;
+
+  --phase-accumulation: #759F7D;
+  --phase-markup: #4A90D9;
+  --phase-blowoff: #D1704A;
+  --phase-distribution: #B83232;
+
+  --gauge-low: #759F7D;
+  --gauge-mid: #D4A574;
+  --gauge-high: #D1704A;
+  --gauge-extreme: #B83232;
+
+  --font-serif: var(--font-dm-serif);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-dm-mono);
+}
+
+[data-theme="dark"] {
+  --cream: #1A1815;
+  --ink: #F0EDE8;
+  --ink-muted: #8A8580;
+  --border: #3F3D3A;
+  --cycle-accent: #D4A574;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
