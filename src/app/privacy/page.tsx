@@ -6,12 +6,25 @@ export const metadata: Metadata = {
     "BitcoinCycle Clock privacy policy — how we handle data, cookies, and analytics.",
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://cycle.vibed-lab.com" },
+    { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://cycle.vibed-lab.com/privacy" },
+  ],
+};
+
 export default function PrivacyPage() {
   return (
     <article
       className="max-w-2xl mx-auto px-4 py-12"
       style={{ color: "var(--ink)" }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <h1
         className="text-3xl mb-2"
         style={{ fontFamily: "var(--font-serif)" }}
