@@ -43,6 +43,20 @@ const articles = [
       "How daily miner issuance value signals cycle extremes, and why halvings mechanically reset this indicator.",
     readTime: "4 min read",
   },
+  {
+    slug: "stock-to-flow-model",
+    title: "Stock-to-Flow Model: Can Bitcoin's Scarcity Predict Its Price?",
+    description:
+      "What the S2F model measures, why it works as a mental framework, and where it falls short as a trading tool.",
+    readTime: "5 min read",
+  },
+  {
+    slug: "dollar-cost-averaging-bitcoin",
+    title: "Dollar Cost Averaging Bitcoin: The Strategy That Beats Timing",
+    description:
+      "How DCA works, historical returns, cycle-aware strategies, and the emotional benefits of consistent investing.",
+    readTime: "6 min read",
+  },
 ];
 
 export default function LearnPage() {

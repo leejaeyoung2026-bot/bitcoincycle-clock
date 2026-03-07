@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/learn/pi-cycle-top-indicator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/learn/bitcoin-halving-history`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/learn/puell-multiple-guide`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/learn/stock-to-flow-model`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/learn/dollar-cost-averaging-bitcoin`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/glossary`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
   ];
 }

@@ -1,0 +1,104 @@
+export const metadata = {
+  title: "Stock-to-Flow Model: Can Bitcoin's Scarcity Predict Its Price?",
+  description:
+    "How the Stock-to-Flow ratio quantifies Bitcoin's scarcity, what PlanB's S2F model predicts, why it works as a mental framework, and where it falls short as a trading tool.",
+};
+
+# Stock-to-Flow Model: Can Bitcoin's Scarcity Predict Its Price?
+
+*By Jay, Bitcoin investor since 2017* · March 2026
+
+Gold is valuable partly because it is hard to produce. Annual mining output adds roughly 1.5% to the existing above-ground supply — meaning it would take about 67 years of current production to replicate the total stockpile. This ratio of existing supply to new production is called Stock-to-Flow, and it is one of the oldest frameworks for thinking about scarcity-driven value. In 2019, an anonymous quantitative analyst known as PlanB applied the same logic to Bitcoin — and ignited one of the most debated valuation models in crypto history.
+
+## What Stock-to-Flow Means
+
+The formula is simple:
+
+**Stock-to-Flow (S2F) = Existing Supply (Stock) / Annual Production (Flow)**
+
+A high S2F ratio means the asset is hard to dilute. A low ratio means new supply can flood the market quickly. Here is how major commodities compare:
+
+| Asset | Approximate S2F Ratio | Interpretation |
+|-------|----------------------|----------------|
+| Gold | ~67 | 67 years of production to double supply |
+| Silver | ~22 | 22 years of production to double supply |
+| Bitcoin (post-2024 halving) | ~120 | 120 years of production to double supply |
+| Platinum | ~1.1 | Supply can nearly double in a year |
+
+Bitcoin's S2F ratio surpassed gold after the April 2024 halving. With only 3.125 BTC issued per block and approximately 19.7 million coins already in circulation, Bitcoin is now — by this metric — the scarcest monetary asset on Earth.
+
+## How It Is Calculated for Bitcoin
+
+Bitcoin makes S2F calculation unusually precise because both variables are known with certainty:
+
+- **Stock:** The total number of Bitcoin that have been mined. As of early 2026, this stands at roughly 19.8 million BTC.
+- **Flow:** The number of new Bitcoin produced per year. At 3.125 BTC per block and approximately 144 blocks per day, annual flow is about 164,250 BTC.
+
+This gives a current S2F ratio of approximately 120. Critically, each halving doubles the S2F ratio overnight — the flow is cut in half while the stock barely changes. No other asset has such a predictable, programmatic increase in scarcity.
+
+## PlanB's S2F Model
+
+In March 2019, PlanB published a model that plotted Bitcoin's S2F ratio against its market capitalization using a log-log regression. The relationship was striking: a near-perfect linear fit with an R-squared above 0.95, meaning S2F explained over 95% of Bitcoin's historical price variation.
+
+The model's core claim is that Bitcoin's price is primarily a function of its scarcity, and that each halving — by doubling the S2F ratio — should propel Bitcoin into a new order-of-magnitude price band:
+
+- **S2F ~10 (pre-2016):** Model predicted prices in the hundreds of dollars.
+- **S2F ~25 (2016–2020):** Model predicted prices in the thousands.
+- **S2F ~50 (2020–2024):** Model predicted prices of $55,000–$100,000.
+- **S2F ~120 (2024–2028):** Model predicts prices of $250,000–$1,000,000.
+
+The model generated enormous attention because it offered a falsifiable, quantitative forecast grounded in a fundamental economic principle: scarcity drives value.
+
+## Why the Model Works (as a Mental Framework)
+
+The S2F model captures something real. Bitcoin's halvings do reduce sell-side pressure from miners, and history shows that price has appreciated significantly after each halving event. The model provides an intuitive explanation: when the flow of new supply is cut but demand remains constant or grows, price must adjust upward to reach a new equilibrium.
+
+The scarcity narrative is also self-reinforcing. As investors internalize the model, they front-run the predicted price appreciation, buying before halvings in anticipation. This creates a feedback loop where awareness of the model contributes to the pattern the model describes.
+
+Additionally, comparing Bitcoin's S2F to gold and silver anchors the analysis in something tangible. Investors can reason about Bitcoin's scarcity relative to assets that have stored value for thousands of years, making the valuation argument more accessible than purely technical on-chain models.
+
+## Why the Model Fails (as a Trading Tool)
+
+Despite its elegance, the S2F model has significant flaws:
+
+**Demand is entirely ignored.** The model treats price as a function of supply alone. In reality, price is always supply multiplied by the willingness and ability of buyers to pay. A perfectly scarce asset that nobody wants is worth nothing. The model cannot account for regulatory crackdowns, competing technologies, macroeconomic conditions, or shifts in investor sentiment.
+
+**Regression issues.** The high R-squared that made the model famous is partly an artifact of fitting a log-log regression to a rapidly growing variable over a short time series. Many non-stationary time series produce deceptively high R-squared values. Statisticians have criticized the model for violating assumptions of linear regression, including cointegration requirements.
+
+**Diminishing predictive accuracy.** The S2F model predicted a price of roughly $100,000–$288,000 during the 2020–2024 halving epoch. Bitcoin peaked at $69,000 in November 2021 — well below the model's central prediction. While it did eventually reach six figures in late 2024, the timing and trajectory diverged significantly from what the model implied.
+
+**Infinite price problem.** As Bitcoin's flow approaches zero (each halving cuts it further), the S2F ratio approaches infinity. The model mathematically implies infinite price — an obvious impossibility. This reveals a fundamental limitation: the model breaks down as its key variable approaches extreme values.
+
+## S2F Deviation on BitcoinCycle Clock
+
+On the BitcoinCycle Clock dashboard, we display the S2F deviation metric — the percentage difference between Bitcoin's actual price and the S2F model price:
+
+| Deviation | Interpretation |
+|-----------|----------------|
+| Below -50% | Price far below model — historically a strong accumulation zone |
+| -50% to 0% | Price below model — bullish conditions if converging |
+| 0% to +100% | Price above model — bull market momentum |
+| Above +100% | Price far above model — historically unsustainable |
+
+This approach treats the S2F model not as a price target but as a baseline for measuring relative over- or under-valuation. When price is significantly below the model, the scarcity argument is being discounted by the market. When price is significantly above, euphoria may be exceeding what scarcity alone can justify.
+
+## Practical Use: Mental Model vs. Trading Signal
+
+The most productive way to use Stock-to-Flow is as a framework, not a formula:
+
+- **Framework use:** "Bitcoin is becoming scarcer on a fixed, knowable schedule. Each halving reduces new supply, and historically this has preceded significant price appreciation. I should be aware of where we are in the halving cycle."
+- **Dangerous use:** "The S2F model says Bitcoin will be $500,000 by next year, so I will leverage my position 10x."
+
+Combine the scarcity narrative with on-chain indicators like MVRV Z-Score, Puell Multiple, and Pi Cycle Top to form a multi-factor view. Scarcity tells you the structural backdrop. On-chain data tells you what participants are actually doing.
+
+## Key Takeaways
+
+- Stock-to-Flow measures scarcity by comparing existing supply to annual production. Bitcoin's S2F ratio now exceeds gold's.
+- PlanB's model shows a strong historical correlation between S2F and price, but correlation is not causation.
+- The model ignores demand, suffers from regression limitations, and implies impossible outcomes at extremes.
+- Use S2F deviation as a relative valuation gauge, not as a price prediction tool.
+- Scarcity is a necessary but not sufficient condition for value. Pair the S2F framework with behavioral and on-chain indicators.
+
+## Disclaimer
+
+This article is for educational purposes only. It does not constitute financial advice, investment advice, or any recommendation to buy or sell Bitcoin or any other asset. Past model accuracy does not guarantee future results. Always do your own research and consult a qualified financial advisor before making investment decisions.
