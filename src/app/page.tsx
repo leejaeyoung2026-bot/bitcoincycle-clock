@@ -280,7 +280,7 @@ export default function Home() {
               { value: "4", label: "On-chain indicators" },
               { value: "3", label: "Cycles tracked" },
               { value: "2017", label: "Investing since" },
-              { value: "11", label: "Learn articles" },
+              { value: "12", label: "Learn articles" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p
@@ -593,7 +593,7 @@ export default function Home() {
           </ul>
           <p>
             <Link href="/learn" style={{ color: "var(--cycle-accent)" }}>
-              View all 11 articles →
+              View all 12 articles →
             </Link>
           </p>
         </section>

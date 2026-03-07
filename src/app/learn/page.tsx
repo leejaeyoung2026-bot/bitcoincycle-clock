@@ -85,6 +85,13 @@ const articles = [
       "How Bitcoin dominance shifts across cycles, why altseason signals a maturing bull market, and using dominance as a timing tool.",
     readTime: "6 min read",
   },
+  {
+    slug: "bitcoin-market-cap-analysis",
+    title: "Bitcoin Market Cap Analysis: Understanding Bitcoin's True Scale and Cycle Positioning",
+    description:
+      "How to interpret BTC's market cap relative to gold, global M2, and historical cycle peaks for better cycle positioning.",
+    readTime: "7 min read",
+  },
 ];
 
 const jsonLd = {
