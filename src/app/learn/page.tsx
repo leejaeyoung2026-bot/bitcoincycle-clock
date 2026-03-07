@@ -57,6 +57,27 @@ const articles = [
       "How DCA works, historical returns, cycle-aware strategies, and the emotional benefits of consistent investing.",
     readTime: "6 min read",
   },
+  {
+    slug: "bitcoin-fear-greed-index",
+    title: "Fear and Greed Index: Reading the Market's Emotions",
+    description:
+      "How Bitcoin's Fear and Greed Index correlates with cycle phases and complements on-chain indicators.",
+    readTime: "5 min read",
+  },
+  {
+    slug: "bitcoin-rainbow-chart",
+    title: "The Bitcoin Rainbow Chart: A Visual Guide to Long-Term Valuation",
+    description:
+      "Logarithmic regression bands, color meanings, and how the Rainbow Chart complements cycle analysis.",
+    readTime: "5 min read",
+  },
+  {
+    slug: "on-chain-vs-technical-analysis",
+    title: "On-Chain vs Technical Analysis: Which One Should You Trust?",
+    description:
+      "Comparing on-chain and technical analysis, when each excels, and how BitcoinCycle Clock integrates both.",
+    readTime: "6 min read",
+  },
 ];
 
 export default function LearnPage() {

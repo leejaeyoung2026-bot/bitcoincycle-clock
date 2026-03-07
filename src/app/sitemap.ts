@@ -18,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/learn/puell-multiple-guide`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/learn/stock-to-flow-model`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/learn/dollar-cost-averaging-bitcoin`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/learn/bitcoin-fear-greed-index`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/learn/bitcoin-rainbow-chart`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/learn/on-chain-vs-technical-analysis`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/glossary`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
   ];
 }

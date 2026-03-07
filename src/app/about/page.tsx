@@ -310,6 +310,13 @@ export default function AboutPage() {
             FAQ
           </a>
           <a
+            href="/glossary"
+            className="px-4 py-2 rounded-lg border transition-colors"
+            style={{ borderColor: "var(--border)", color: "var(--ink-muted)" }}
+          >
+            Glossary
+          </a>
+          <a
             href="/contact"
             className="px-4 py-2 rounded-lg border transition-colors"
             style={{ borderColor: "var(--border)", color: "var(--ink-muted)" }}
