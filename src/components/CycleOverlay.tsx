@@ -12,9 +12,9 @@ interface CycleOverlayProps {
 // -----------------------------------------------------------------------
 
 const CYCLE_COLORS = [
-  "rgba(117, 159, 125, 0.55)", // Cycle 1 – muted green
-  "rgba(74, 144, 217, 0.55)",  // Cycle 2 – muted blue
-  "rgba(209, 112, 74, 0.55)",  // Cycle 3 – muted terracotta
+  "rgba(43, 166, 140, 0.55)",  // Cycle 1 – teal (phase-accumulation family)
+  "rgba(45, 125, 210, 0.55)",  // Cycle 2 – signal blue (phase-markup family)
+  "rgba(224, 123, 48, 0.50)",  // Cycle 3 – amber-orange (phase-blowoff family)
 ] as const;
 
 const CYCLE_LABELS = ["2012 Halving", "2016 Halving", "2020 Halving", "2024 Halving (current)"];
@@ -74,11 +74,11 @@ function drawChart(
   const chartH = logicalH - MARGIN.top - MARGIN.bottom;
 
   // CSS colors
-  const inkColor      = readVar("--ink",        "#2C2825");
-  const inkMuted      = readVar("--ink-muted",   "#9A9490");
-  const borderColor   = readVar("--border",      "#E8E5E0");
-  const accentColor   = readVar("--cycle-accent","#D4A574");
-  const bgColor       = readVar("--cream",       "#F5F1EB");
+  const inkColor      = readVar("--ink",         "#111318");
+  const inkMuted      = readVar("--ink-muted",   "#7A8292");
+  const borderColor   = readVar("--border",      "#D4D8DF");
+  const accentColor   = readVar("--cycle-accent","#E8A020");
+  const bgColor       = readVar("--bg-elevated", "#FFFFFF");
 
   ctx.clearRect(0, 0, logicalW, logicalH);
 

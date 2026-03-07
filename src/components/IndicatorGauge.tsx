@@ -149,7 +149,7 @@ export default function IndicatorGauge({
         <path
           d={describeGaugeArc(cx, cy, midR, 0, 180)}
           fill="none"
-          stroke="var(--border, #E8E5E0)"
+          stroke="var(--border, #D4D8DF)"
           strokeWidth={strokeW}
           strokeLinecap="butt"
         />
@@ -185,7 +185,7 @@ export default function IndicatorGauge({
               y1={inner.y}
               x2={outer.x}
               y2={outer.y}
-              stroke="var(--cream, #F5F1EB)"
+              stroke="var(--bg-elevated, #FFFFFF)"
               strokeWidth={1.5}
             />
           );
@@ -197,7 +197,7 @@ export default function IndicatorGauge({
           y1={needleBase.y}
           x2={needleEnd.x}
           y2={needleEnd.y}
-          stroke="var(--ink, #2C2825)"
+          stroke="var(--ink, #111318)"
           strokeWidth={2.5}
           strokeLinecap="round"
         />
@@ -207,7 +207,7 @@ export default function IndicatorGauge({
           cx={needleEnd.x}
           cy={needleEnd.y}
           r={4}
-          fill="var(--ink, #2C2825)"
+          fill="var(--ink, #111318)"
         />
 
         {/* Centre pivot */}
@@ -215,13 +215,13 @@ export default function IndicatorGauge({
           cx={cx}
           cy={cy}
           r={6}
-          fill="var(--ink, #2C2825)"
+          fill="var(--ink, #111318)"
         />
         <circle
           cx={cx}
           cy={cy}
           r={3}
-          fill="var(--cream, #F5F1EB)"
+          fill="var(--bg-elevated, #FFFFFF)"
         />
 
         {/* ---- Value text (centred inside the arc) ---- */}
@@ -231,12 +231,13 @@ export default function IndicatorGauge({
           textAnchor="middle"
           dominantBaseline="middle"
           fontSize="20"
-          fontWeight="700"
-          fill="var(--ink, #2C2825)"
+          fontWeight="600"
+          fill="var(--ink, #111318)"
+          fontFamily="var(--font-mono, monospace)"
         >
           {displayValue}
           {unit && (
-            <tspan fontSize="13" fontWeight="500" fill="var(--ink-muted, #9A9490)">
+            <tspan fontSize="12" fontWeight="500" fill="var(--ink-muted, #7A8292)">
               {unit}
             </tspan>
           )}
@@ -250,7 +251,7 @@ export default function IndicatorGauge({
           style={{
             fontSize: "0.72rem",
             fontWeight: 600,
-            color: "var(--ink, #2C2825)",
+            color: "var(--ink, #111318)",
             textAlign: "center",
           }}
         >
@@ -276,8 +277,8 @@ export default function IndicatorGauge({
           <span
             style={{
               fontSize: "0.6rem",
-              color: "var(--ink-muted, #9A9490)",
-              border: "1px solid var(--border, #E8E5E0)",
+              color: "var(--ink-muted, #7A8292)",
+              border: "1px solid var(--border, #D4D8DF)",
               borderRadius: "3px",
               padding: "0px 4px",
               marginTop: "2px",

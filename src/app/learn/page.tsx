@@ -141,8 +141,8 @@ export default function LearnPage() {
           <Link
             key={a.slug}
             href={`/learn/${a.slug}`}
-            className="block p-6 rounded-lg border transition-colors hover:border-current"
-            style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+            className="panel block p-6 transition-all"
+            style={{ textDecoration: "none" }}
           >
             <h2
               className="text-lg font-medium mb-1"

@@ -156,7 +156,7 @@ export default function AboutPage() {
       {/* Credentials Box */}
       <div
         className="p-5 rounded-lg border text-sm mb-10"
-        style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+        style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
       >
         <p
           className="font-mono text-xs uppercase mb-3"
@@ -255,7 +255,7 @@ export default function AboutPage() {
         <div className="space-y-3">
           <div
             className="p-4 rounded-lg border"
-            style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+            style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
           >
             <a
               href="https://backtest.vibed-lab.com"
@@ -273,7 +273,7 @@ export default function AboutPage() {
           </div>
           <div
             className="p-4 rounded-lg border"
-            style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+            style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
           >
             <a
               href="https://clearrx.vibed-lab.com"

@@ -26,14 +26,14 @@ function readCssColors(): ClockColors {
   const get = (v: string, fallback: string) =>
     s.getPropertyValue(v).trim() || fallback;
   return {
-    accumulation: get("--phase-accumulation", "#759F7D"),
-    markup: get("--phase-markup", "#4A90D9"),
-    blowoff: get("--phase-blowoff", "#D1704A"),
-    distribution: get("--phase-distribution", "#B83232"),
-    accent: get("--cycle-accent", "#D4A574"),
-    ink: get("--ink", "#2C2825"),
-    inkMuted: get("--ink-muted", "#9A9490"),
-    border: get("--border", "#E8E5E0"),
+    accumulation: get("--phase-accumulation", "#2BA68C"),
+    markup: get("--phase-markup", "#2D7DD2"),
+    blowoff: get("--phase-blowoff", "#E07B30"),
+    distribution: get("--phase-distribution", "#C42B2B"),
+    accent: get("--cycle-accent", "#E8A020"),
+    ink: get("--ink", "#111318"),
+    inkMuted: get("--ink-muted", "#7A8292"),
+    border: get("--border", "#D4D8DF"),
   };
 }
 

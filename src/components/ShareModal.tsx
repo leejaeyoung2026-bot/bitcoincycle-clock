@@ -127,18 +127,7 @@ export default function ShareModal({
       {/* Backdrop */}
       <div
         onClick={onClose}
-        style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 50,
-          background: "rgba(0, 0, 0, 0.5)",
-          backdropFilter: "blur(4px)",
-          WebkitBackdropFilter: "blur(4px)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "16px",
-        }}
+        className="modal-backdrop"
         aria-modal="true"
         role="dialog"
         aria-label="Share dialog"
@@ -146,16 +135,7 @@ export default function ShareModal({
         {/* Modal card — stop click propagation so backdrop click doesn't close it */}
         <div
           onClick={(e) => e.stopPropagation()}
-          style={{
-            background: "var(--cream)",
-            border: "1px solid var(--border)",
-            borderRadius: "12px",
-            width: "100%",
-            maxWidth: "400px",
-            padding: "28px 28px 24px",
-            position: "relative",
-            boxShadow: "0 20px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.08)",
-          }}
+          className="modal-panel"
         >
           {/* Close button */}
           <button
@@ -237,20 +217,21 @@ export default function ShareModal({
                 gap: "8px",
                 width: "100%",
                 padding: "12px 20px",
-                borderRadius: "8px",
+                borderRadius: "var(--radius-md)",
                 border: "none",
                 background:
                   downloadState === "done"
-                    ? "#759F7D"
+                    ? "var(--gauge-cold)"
                     : downloadState === "error"
-                    ? "#B83232"
-                    : "var(--cycle-accent)",
-                color: "#fff",
+                    ? "var(--gauge-extreme)"
+                    : "var(--accent)",
+                color: downloadState === "done" || downloadState === "error" ? "#fff" : "#0D1117",
                 fontSize: "14px",
                 fontWeight: 600,
                 cursor: downloadState === "loading" ? "wait" : "pointer",
                 opacity: downloadState === "loading" ? 0.75 : 1,
                 transition: "background 0.2s, opacity 0.2s",
+                fontFamily: "var(--font-sans)",
               }}
             >
               <svg
@@ -281,14 +262,15 @@ export default function ShareModal({
                 gap: "8px",
                 width: "100%",
                 padding: "12px 20px",
-                borderRadius: "8px",
+                borderRadius: "var(--radius-md)",
                 border: "1px solid var(--border)",
                 background: "transparent",
                 color: "var(--ink)",
                 fontSize: "14px",
-                fontWeight: 600,
+                fontWeight: 500,
                 cursor: "pointer",
-                transition: "background 0.15s",
+                transition: "background 0.15s, border-color 0.15s",
+                fontFamily: "var(--font-sans)",
               }}
             >
               <svg

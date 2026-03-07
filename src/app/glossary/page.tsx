@@ -271,7 +271,7 @@ export default function GlossaryPage() {
       {/* Jump-to-letter navigation */}
       <nav
         className="mb-10 p-4 rounded-lg border flex flex-wrap gap-2"
-        style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+        style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
         aria-label="Jump to letter"
       >
         {letters.map((letter) => (
@@ -305,7 +305,7 @@ export default function GlossaryPage() {
                 className="p-4 rounded-lg border"
                 style={{
                   borderColor: "var(--border)",
-                  background: "var(--cream)",
+                  background: "var(--bg-elevated)",
                 }}
               >
                 <dt

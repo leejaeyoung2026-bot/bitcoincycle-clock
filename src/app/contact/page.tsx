@@ -65,7 +65,7 @@ export default function ContactPage() {
           style={{
             color: "var(--cycle-accent)",
             borderColor: "var(--border)",
-            background: "var(--cream)",
+            background: "var(--bg-elevated)",
           }}
         >
           jay@vibed-lab.com
@@ -107,7 +107,7 @@ export default function ContactPage() {
           style={{
             color: "var(--ink-muted)",
             borderColor: "var(--border)",
-            background: "var(--cream)",
+            background: "var(--bg-elevated)",
           }}
         >
           github.com/leejaeyoung2026-bot/bitcoincycle-clock
@@ -137,7 +137,7 @@ export default function ContactPage() {
         <div className="space-y-3">
           <div
             className="p-4 rounded-lg border"
-            style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+            style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
           >
             <a
               href="https://backtest.vibed-lab.com"
@@ -155,7 +155,7 @@ export default function ContactPage() {
           </div>
           <div
             className="p-4 rounded-lg border"
-            style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+            style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
           >
             <a
               href="https://clearrx.vibed-lab.com"

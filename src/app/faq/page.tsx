@@ -160,7 +160,7 @@ export default function FaqPage() {
 
         <div
           className="rounded-lg border overflow-hidden"
-          style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+          style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
         >
           {faqs.map((faq, index) => (
             <details
