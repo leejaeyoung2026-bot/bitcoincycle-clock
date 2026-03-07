@@ -105,6 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6874320463657568"
           crossOrigin="anonymous"
         />
+        <link rel="manifest" href="/manifest.json" />
         <JsonLd />
       </head>
       <body className="antialiased">

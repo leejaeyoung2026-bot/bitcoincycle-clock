@@ -26,6 +26,9 @@ export default function Nav() {
         <Link href="/about" className="opacity-60 hover:opacity-100 transition-opacity">
           About
         </Link>
+        <Link href="/glossary" className="opacity-60 hover:opacity-100 transition-opacity">
+          Glossary
+        </Link>
         <button
           onClick={toggle}
           className="opacity-60 hover:opacity-100 transition-opacity text-xs font-mono"
