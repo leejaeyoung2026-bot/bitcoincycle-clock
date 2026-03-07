@@ -562,6 +562,37 @@ export default function Home() {
             , a free tool for backtesting cryptocurrency strategies. The BitcoinCycle Clock is part
             of the same effort to give independent investors better analytical tools.
           </p>
+
+          {/* Explore Articles */}
+          <h2
+            className="text-2xl font-bold mt-10 mb-3"
+            style={{
+              fontFamily: "var(--font-serif)",
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Explore Our Learn Hub
+          </h2>
+          <ul className="space-y-1 mb-4">
+            {[
+              { href: "/learn/understanding-bitcoin-cycle", text: "Understanding Bitcoin's 4-Year Cycle" },
+              { href: "/learn/mvrv-z-score-explained", text: "MVRV Z-Score Explained" },
+              { href: "/learn/pi-cycle-top-indicator", text: "Pi Cycle Top Indicator" },
+              { href: "/learn/bitcoin-halving-history", text: "Bitcoin Halving History" },
+              { href: "/learn/dollar-cost-averaging-bitcoin", text: "Dollar Cost Averaging Bitcoin" },
+            ].map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} style={{ color: "var(--cycle-accent)" }}>
+                  {link.text} →
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p>
+            <Link href="/learn" style={{ color: "var(--cycle-accent)" }}>
+              View all 7 articles →
+            </Link>
+          </p>
         </section>
 
         {/* ----------------------------------------------------------------
