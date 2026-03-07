@@ -203,10 +203,10 @@ export default function FaqPage() {
           <em>
             Have a question not covered here? Reach out at{" "}
             <a
-              href="mailto:jay@vibed-lab.com"
+              href="mailto:contact@vibed-lab.com"
               style={{ color: "var(--cycle-accent)" }}
             >
-              jay@vibed-lab.com
+              contact@vibed-lab.com
             </a>{" "}
             and we will add it to this page.
           </em>

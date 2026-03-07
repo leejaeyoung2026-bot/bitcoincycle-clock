@@ -188,10 +188,10 @@ export default function PrivacyPage() {
           If you have any questions or concerns about this privacy policy,
           please reach out at{" "}
           <a
-            href="mailto:jay@vibed-lab.com"
+            href="mailto:contact@vibed-lab.com"
             style={{ color: "var(--cycle-accent)" }}
           >
-            jay@vibed-lab.com
+            contact@vibed-lab.com
           </a>
           .
         </p>
