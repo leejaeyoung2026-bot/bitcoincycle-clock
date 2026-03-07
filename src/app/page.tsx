@@ -280,7 +280,7 @@ export default function Home() {
               { value: "4", label: "On-chain indicators" },
               { value: "3", label: "Cycles tracked" },
               { value: "2017", label: "Investing since" },
-              { value: "7", label: "Learn articles" },
+              { value: "10", label: "Learn articles" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p

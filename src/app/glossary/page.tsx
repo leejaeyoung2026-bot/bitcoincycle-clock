@@ -123,6 +123,11 @@ const glossaryTerms: GlossaryTerm[] = [
       "A ratio that compares Bitcoin\u2019s market value (current price times supply) to its realized value (the average price at which each coin last moved on-chain). When the Z-Score is high, the market is significantly overvalued relative to what holders actually paid; when it is low or negative, it suggests undervaluation. It is one of the most reliable on-chain cycle indicators.",
   },
   {
+    term: "Logarithmic Regression",
+    definition:
+      "A statistical technique that fits a curve to Bitcoin's historical price data on a logarithmic scale. Because Bitcoin's percentage gains have diminished over time while remaining positive, logarithmic regression captures the long-term growth trend more accurately than linear models. The Bitcoin Rainbow Chart is built on this method.",
+  },
+  {
     term: "On-Chain Analysis",
     definition:
       "The practice of studying data recorded directly on the Bitcoin blockchain \u2014 such as transaction volumes, wallet balances, and coin movement patterns \u2014 to gauge market health and cycle positioning. Unlike traditional technical analysis, on-chain analysis uses verifiable, transparent data that cannot be fabricated.",
@@ -138,6 +143,11 @@ const glossaryTerms: GlossaryTerm[] = [
       "A metric that divides the daily USD value of newly mined bitcoins by its 365-day moving average. A high Puell Multiple means miners are earning significantly more than usual, which tends to coincide with cycle peaks. A low reading suggests miner revenue is depressed, often aligning with cycle bottoms.",
   },
   {
+    term: "Rainbow Chart",
+    definition:
+      "A long-term Bitcoin valuation tool that overlays colored bands on a logarithmic price chart. Each band represents a different standard deviation from the historical growth trend — from dark blue (extremely undervalued) through green (fair value) to dark red (extremely overvalued). It provides a quick visual reference for where Bitcoin's current price sits relative to its historical range.",
+  },
+  {
     term: "Realized Cap",
     definition:
       "An alternative to market cap that values each bitcoin at the price it last moved on the blockchain, rather than at the current spot price. Realized cap represents the aggregate cost basis of all holders and strips out the influence of dormant or lost coins. It provides a more grounded view of capital invested in the network.",
@@ -148,9 +158,19 @@ const glossaryTerms: GlossaryTerm[] = [
       "The realized cap divided by the current circulating supply, giving the average on-chain cost basis per bitcoin. When the spot price is below the realized price, the average holder is sitting on an unrealized loss \u2014 a condition that has historically only occurred near the deepest bear market bottoms.",
   },
   {
+    term: "RSI (Relative Strength Index)",
+    definition:
+      "A momentum oscillator that measures the speed and magnitude of recent price changes on a scale from 0 to 100. Readings above 70 suggest overbought conditions and readings below 30 suggest oversold conditions. In cycle analysis, monthly RSI reaching extreme levels has historically aligned with major cycle tops and bottoms.",
+  },
+  {
     term: "Stock-to-Flow (S2F)",
     definition:
       "A scarcity model that compares Bitcoin\u2019s existing supply (stock) to the rate of new production (flow). Higher stock-to-flow ratios imply greater scarcity and, according to the model, higher expected prices. Each halving doubles the S2F ratio, which the model uses to project price targets for each cycle.",
+  },
+  {
+    term: "Technical Analysis",
+    definition:
+      "The study of price charts and volume patterns to predict future market movements. Unlike on-chain analysis, which uses blockchain data, technical analysis relies on historical price and volume data. Common tools include moving averages, support/resistance levels, RSI, and chart patterns. Most effective when combined with on-chain metrics for cycle positioning.",
   },
   {
     term: "Supply Shock",
