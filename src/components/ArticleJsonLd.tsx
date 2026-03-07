@@ -7,7 +7,9 @@ export default function ArticleJsonLd({
   description: string;
   slug: string;
 }) {
-  const jsonLd = {
+  const base = "https://cycle.vibed-lab.com";
+
+  const articleLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
@@ -16,31 +18,62 @@ export default function ArticleJsonLd({
       "@type": "Person",
       name: "Jay",
       description: "Bitcoin investor since 2017, survived 2 complete market cycles",
-      url: "https://cycle.vibed-lab.com/about",
+      url: `${base}/about`,
     },
     publisher: {
       "@type": "Organization",
       name: "BitcoinCycle Clock",
-      url: "https://cycle.vibed-lab.com",
+      url: base,
     },
-    url: `https://cycle.vibed-lab.com/learn/${slug}`,
+    url: `${base}/learn/${slug}`,
     datePublished: "2026-03-07",
     dateModified: "2026-03-07",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://cycle.vibed-lab.com/learn/${slug}`,
+      "@id": `${base}/learn/${slug}`,
     },
     isPartOf: {
       "@type": "WebSite",
       name: "BitcoinCycle Clock",
-      url: "https://cycle.vibed-lab.com",
+      url: base,
     },
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: base,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Learn",
+        item: `${base}/learn`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title,
+        item: `${base}/learn/${slug}`,
+      },
+    ],
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+    </>
   );
 }
