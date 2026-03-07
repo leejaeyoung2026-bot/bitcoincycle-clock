@@ -119,6 +119,33 @@ export default function ContactPage() {
         </a>
       </section>
 
+      <section className="mb-10">
+        <h2
+          className="text-xl mb-3"
+          style={{ fontFamily: "var(--font-serif)" }}
+        >
+          Related Tool
+        </h2>
+        <div
+          className="p-4 rounded-lg border"
+          style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
+        >
+          <a
+            href="https://backtest.vibed-lab.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium"
+            style={{ color: "var(--cycle-accent)", fontFamily: "var(--font-serif)" }}
+          >
+            CryptoBacktest
+          </a>
+          <p className="text-sm mt-1" style={{ color: "var(--ink-muted)" }}>
+            backtest.vibed-lab.com — Backtest historical trading strategies
+            against real Bitcoin and crypto price data.
+          </p>
+        </div>
+      </section>
+
     </article>
   );
 }
