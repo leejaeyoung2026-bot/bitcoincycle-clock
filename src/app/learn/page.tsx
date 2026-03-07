@@ -61,7 +61,7 @@ const articles = [
 
 export default function LearnPage() {
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
+    <>
       <h1
         className="text-3xl mb-2"
         style={{ fontFamily: "var(--font-serif)" }}
@@ -99,6 +99,6 @@ export default function LearnPage() {
           </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 }
