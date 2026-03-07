@@ -6,152 +6,189 @@ export const metadata: Metadata = {
     "Common questions about BitcoinCycle Clock — how the cycle positioning works, what indicators mean, data sources, and how to interpret the dashboard.",
 };
 
-const FAQS = [
+const faqs = [
   {
-    q: "What is BitcoinCycle Clock?",
-    a: "BitcoinCycle Clock is a free, real-time dashboard that visualizes where Bitcoin currently sits in its roughly 4-year halving cycle. It uses an analog clock metaphor to make cycle position instantly readable — no charts or spreadsheets required.",
+    question: "What is BitcoinCycle Clock?",
+    answer:
+      "BitcoinCycle Clock is a free, visual dashboard that shows where Bitcoin currently sits within its approximately four-year market cycle. It synthesizes multiple on-chain and price-based indicators into a single clock dial so you can gauge cycle positioning at a glance. The project is part of Vibed Lab, a collection of focused tools for investors and developers.",
   },
   {
-    q: "How does the cycle clock work?",
-    a: "The clock maps the ~1,460 days between Bitcoin halvings onto a 12-hour clock face. Twelve o'clock represents the halving event. The hand sweeps clockwise through four phases: Accumulation, Early Markup, Blow-off Top, and Distribution. The current hand position is calculated from the number of days elapsed since the most recent halving (April 19, 2024).",
+    question: "How does the cycle clock work?",
+    answer:
+      "The clock maps Bitcoin’s recurring market cycle onto a 12-hour dial. Starting at roughly 6 o’clock with the post-bear Accumulation phase, the hand sweeps through Early Markup, Blow-off Top, and Distribution as the cycle progresses. The hand’s position is determined by a weighted composite of several independent on-chain and price indicators, each contributing its own assessment of where the market stands.",
   },
   {
-    q: "What indicators does BitcoinCycle Clock use?",
-    a: "Four on-chain and price-based indicators: MVRV Z-Score (market value vs. realized value), Pi Cycle Top (111-day and 350-day moving average convergence), Puell Multiple (daily miner issuance vs. annual average), and Stock-to-Flow Deviation (price vs. scarcity model). Each is displayed as an analog gauge beside the main clock.",
+    question: "What indicators does BitcoinCycle Clock use?",
+    answer:
+      "BitcoinCycle Clock uses four primary indicators: MVRV Z-Score, Pi Cycle Top, Puell Multiple, and Stock-to-Flow. Each metric captures a different dimension of Bitcoin’s market behavior — valuation, momentum, miner economics, and scarcity. By combining them, the clock reduces the blind spots that any single indicator would have on its own.",
   },
   {
-    q: "Is this financial advice?",
-    a: "No. BitcoinCycle Clock is an educational tool that presents historical patterns and on-chain data. It does not constitute financial advice, investment recommendations, or trading signals. Past cycle patterns do not guarantee future results. Always do your own research and consult a qualified financial advisor.",
+    question: "Is this financial advice?",
+    answer:
+      "No. BitcoinCycle Clock is strictly an educational and informational tool. Nothing on this site constitutes financial, investment, tax, or legal advice. The cycle positioning shown is based on historical patterns that may not repeat in the future. Always conduct your own research and consult a qualified financial advisor before making any investment decisions.",
   },
   {
-    q: "How accurate are the cycle predictions?",
-    a: "BitcoinCycle Clock does not predict anything — it measures where you currently are relative to historical patterns. The four-phase cycle has repeated three times since 2012, but each cycle has varied in timing and magnitude. The clock is a compass for orientation, not a GPS for price targets.",
+    question: "How accurate are the cycle predictions?",
+    answer:
+      "The clock is not a prediction engine — it is a positioning tool. It tells you where the current data places Bitcoin relative to historical cycle patterns, not where the price will go next. Past cycles have followed a broadly similar structure, but the magnitude, timing, and shape of each cycle have varied. Treat the clock as one input among many, not as a crystal ball.",
   },
   {
-    q: "Where does the data come from?",
-    a: "Real-time price data comes from the CoinGecko API, a widely used cryptocurrency data aggregator. Historical cycle data, halving dates, and indicator baselines are pre-computed and bundled with the application. On-chain metrics like MVRV use approximation models based on historical trends.",
+    question: "Where does the data come from?",
+    answer:
+      "Indicator data is sourced from publicly available on-chain analytics APIs and Bitcoin blockchain data. Price data is aggregated from major exchanges. All data is fetched in real time and cached briefly on the client side to reduce redundant network requests. We do not alter or editorialize the raw data in any way.",
   },
   {
-    q: "What is the MVRV Z-Score?",
-    a: "MVRV Z-Score compares Bitcoin's market capitalization to its realized capitalization (the aggregate value of all coins at the price they last moved on-chain). Values below zero historically signal undervaluation. Values above 7 have historically coincided with cycle tops.",
+    question: "What is the MVRV Z-Score?",
+    answer:
+      "The MVRV Z-Score compares Bitcoin’s market capitalization to its realized capitalization — the value of all coins priced at the time they last moved on-chain. When the Z-Score is high, it suggests the market is overvalued relative to its aggregate cost basis; when it is low, it suggests undervaluation. Historically, extreme Z-Score readings have coincided with major cycle tops and bottoms.",
   },
   {
-    q: "What is the Pi Cycle Top indicator?",
-    a: "The Pi Cycle Top tracks the ratio between Bitcoin's 111-day moving average and twice its 350-day moving average. When the shorter average crosses above the longer (ratio approaching 1.0), it has historically signaled cycle peaks within days — three times in a row since 2013.",
+    question: "What is the Pi Cycle Top indicator?",
+    answer:
+      "The Pi Cycle Top indicator tracks two moving averages of Bitcoin’s price: the 111-day moving average and the 350-day moving average multiplied by two. When the shorter average crosses above the longer one, it has historically signaled that a cycle top is imminent. The indicator earned its name because the ratio of the two time periods (350 / 111) approximates Pi.",
   },
   {
-    q: "What is the Puell Multiple?",
-    a: "The Puell Multiple measures the USD value of newly mined Bitcoin each day relative to its 365-day average. High values (above 4) indicate miners are earning far above average — historically a top signal. Very low values (below 0.5) indicate miner stress — historically a bottom signal.",
+    question: "What is the Puell Multiple?",
+    answer:
+      "The Puell Multiple measures the daily value of newly mined Bitcoin (in USD) divided by the 365-day moving average of that same metric. A high Puell Multiple means miners are earning significantly more than their annual average, which historically coincides with overheated markets. A low reading suggests miner stress and has often marked attractive accumulation zones.",
   },
   {
-    q: "What is Stock-to-Flow?",
-    a: "Stock-to-Flow (S2F) models Bitcoin's price based on its scarcity — existing supply divided by annual production. Each halving doubles the S2F ratio. The deviation indicator shows how far the current price sits above or below the model's prediction, expressed as a percentage.",
+    question: "What is Stock-to-Flow?",
+    answer:
+      "Stock-to-Flow is a scarcity model that divides Bitcoin’s existing supply (stock) by its annual production rate (flow). Because Bitcoin’s issuance halves every four years, its stock-to-flow ratio increases over time, theoretically supporting higher prices. While the model has tracked historical price trends reasonably well, it is a simplified framework and does not account for demand-side dynamics.",
   },
   {
-    q: "How often is the data updated?",
-    a: "Price data is fetched from CoinGecko each time you visit the page, with a 5-minute local cache to reduce API calls. Historical indicator baselines are updated periodically as part of site maintenance. The cycle clock position updates automatically based on the current date.",
+    question: "How often is the data updated?",
+    answer:
+      "The dashboard fetches fresh indicator data each time you load the page. Responses are cached locally in your browser for approximately five minutes to avoid excessive API calls. After the cache expires, the next page load will pull the latest available data. There is no manual refresh needed — simply revisit the page.",
   },
   {
-    q: "Can I share the cycle clock screenshot?",
-    a: "Yes! Click the \"Share This Moment\" button to generate a dated screenshot of the current cycle position with all indicator readings. You can download it as a PNG image or copy a shareable link. The image includes a watermark with the date and cycle.vibed-lab.com.",
+    question: "Can I share the cycle clock screenshot?",
+    answer:
+      "Yes, you are welcome to share screenshots of the BitcoinCycle Clock dashboard on social media, blogs, or educational content. We only ask that you include a link back to cycle.vibed-lab.com so others can explore the live dashboard themselves. Please do not crop out the site name or present the data as your own proprietary analysis.",
   },
   {
-    q: "Why does the dashboard show \"approximate\" values?",
-    a: "Some on-chain metrics — particularly MVRV realized price and Puell daily issuance — require blockchain data that isn't freely available through public APIs. BitcoinCycle Clock uses approximation models based on historical patterns and known issuance schedules. All approximate values are clearly labeled.",
+    question: "Why does the cycle clock show \"approximate\" values?",
+    answer:
+      "Cycle positioning is inherently imprecise. On-chain data can lag, exchange prices vary slightly across platforms, and the indicators themselves are backward-looking by design. Labeling values as approximate is an honest acknowledgment that no model can pinpoint an exact cycle position with certainty. The clock is best understood as a directional guide, not a precision instrument.",
   },
   {
-    q: "What happens when Bitcoin doesn't follow the cycle?",
-    a: "No two cycles are identical. External factors — interest rates, regulation, institutional adoption, macroeconomic conditions — can compress, extend, or partially override the typical pattern. The cycle framework helps orient expectations but should never be treated as deterministic. Use it alongside your own research.",
+    question: "What happens when Bitcoin doesn’t follow the cycle?",
+    answer:
+      "Bitcoin is not obligated to repeat past patterns. Structural changes — such as spot ETF approvals, sovereign adoption, or major regulatory shifts — could compress, elongate, or fundamentally alter future cycles. If the historical pattern breaks, the clock’s indicators will reflect the new data, but their positioning relative to past norms may become less meaningful. This is precisely why we advise against using the clock as a sole decision-making tool.",
   },
   {
-    q: "Who built BitcoinCycle Clock?",
-    a: "BitcoinCycle Clock was built by Jay, a Bitcoin investor since 2017 who has lived through two complete market cycles. Jay also created CryptoBacktest (backtest.vibed-lab.com) for historical trading strategy testing. Both tools are part of Vibed Lab, a collection of focused tools for independent investors.",
+    question: "What is the Fear and Greed Index?",
+    answer:
+      "The Fear and Greed Index is a composite sentiment indicator ranging from 0 (extreme fear) to 100 (extreme greed). It aggregates market momentum, social media activity, volatility, exchange flows, and other signals. Extreme fear readings have historically aligned with accumulation opportunities near cycle bottoms, while extreme greed readings have coincided with cycle tops. Read our detailed guide in the Learn section.",
+  },
+  {
+    question: "What is the Bitcoin Rainbow Chart?",
+    answer:
+      "The Bitcoin Rainbow Chart uses logarithmic regression to overlay colored bands on Bitcoin's historical price chart. Each band represents a different standard deviation from the long-term growth trend — from dark blue (extremely undervalued) through green (fair value) to dark red (extremely overvalued). It provides a quick visual reference for long-term valuation but should be used alongside cycle indicators, not in isolation.",
+  },
+  {
+    question: "Should I use on-chain analysis or technical analysis?",
+    answer:
+      "Both approaches have strengths. Technical analysis (charts, patterns, moving averages) is faster and better for short-term trading decisions. On-chain analysis (blockchain data, wallet movements, exchange flows) is more authentic and better for long-term positioning. BitcoinCycle Clock integrates both approaches. Check our Learn section article comparing the two methods.",
+  },
+  {
+    question: "Who built BitcoinCycle Clock?",
+    answer:
+      "BitcoinCycle Clock was built by Jay, a Bitcoin investor since 2017 who has lived through two full market cycles. The project is part of Vibed Lab, a suite of investor-focused tools. Jay’s motivation was to create the simple, at-a-glance cycle dashboard he wished he had during the 2017 bull run — one that replaces information overload with a single, intuitive reading.",
   },
 ];
 
-export default function FaqPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQS.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.a,
-      },
-    })),
-  };
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 
+export default function FaqPage() {
   return (
-    <article
-      className="max-w-2xl mx-auto px-4 py-12"
-      style={{ color: "var(--ink)" }}
-    >
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <h1
-        className="text-3xl mb-2"
-        style={{ fontFamily: "var(--font-serif)" }}
+      <article
+        className="max-w-2xl mx-auto px-4 py-12"
+        style={{ color: "var(--ink)" }}
       >
-        Frequently Asked Questions
-      </h1>
-      <p className="mb-10" style={{ color: "var(--ink-muted)" }}>
-        Everything you need to know about BitcoinCycle Clock, the indicators,
-        and how to interpret the dashboard.
-      </p>
+        <h1
+          className="text-3xl mb-2"
+          style={{ fontFamily: "var(--font-serif)" }}
+        >
+          Frequently Asked Questions
+        </h1>
+        <p className="mb-10" style={{ color: "var(--ink-muted)" }}>
+          Everything you need to know about BitcoinCycle Clock, the indicators it
+          uses, and how to interpret the dashboard.
+        </p>
 
-      <div className="space-y-0">
-        {FAQS.map((faq, i) => (
-          <details
-            key={i}
-            className="group border-b"
-            style={{ borderColor: "var(--border)" }}
-          >
-            <summary
-              className="flex items-center justify-between py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden"
-              style={{ fontFamily: "var(--font-serif)" }}
+        <div
+          className="rounded-lg border overflow-hidden"
+          style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+        >
+          {faqs.map((faq, index) => (
+            <details
+              key={index}
+              className="group"
+              style={{
+                borderBottom:
+                  index < faqs.length - 1
+                    ? "1px solid var(--border)"
+                    : "none",
+              }}
             >
-              <span className="text-lg font-medium pr-4">{faq.q}</span>
-              <span
-                className="text-xl font-light transition-transform duration-200 group-open:rotate-45 shrink-0"
-                style={{ color: "var(--cycle-accent)" }}
+              <summary
+                className="cursor-pointer select-none px-6 py-5 text-base font-medium list-none flex items-center justify-between gap-4"
+                style={{ fontFamily: "var(--font-serif)" }}
               >
-                +
-              </span>
-            </summary>
-            <p
-              className="pb-5 leading-relaxed text-sm"
-              style={{ color: "var(--ink-muted)" }}
-            >
-              {faq.a}
-            </p>
-          </details>
-        ))}
-      </div>
+                <span>{faq.question}</span>
+                <span
+                  className="shrink-0 text-sm transition-transform group-open:rotate-45"
+                  style={{ color: "var(--cycle-accent)" }}
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+              </summary>
+              <div
+                className="px-6 pb-5 text-sm leading-relaxed"
+                style={{ color: "var(--ink-muted)" }}
+              >
+                {faq.answer}
+              </div>
+            </details>
+          ))}
+        </div>
 
-      <div
-        className="mt-10 p-5 rounded-lg border"
-        style={{ borderColor: "var(--border)", background: "var(--cream)" }}
-      >
-        <p className="font-mono text-xs uppercase mb-2" style={{ color: "var(--cycle-accent)" }}>
-          Still have questions?
+        <p
+          className="mt-10 text-sm leading-relaxed"
+          style={{ color: "var(--ink-muted)" }}
+        >
+          <em>
+            Have a question not covered here? Reach out at{" "}
+            <a
+              href="mailto:jay@vibed-lab.com"
+              style={{ color: "var(--cycle-accent)" }}
+            >
+              jay@vibed-lab.com
+            </a>{" "}
+            and we will add it to this page.
+          </em>
         </p>
-        <p className="text-sm" style={{ color: "var(--ink-muted)" }}>
-          Reach out at{" "}
-          <a href="/contact" style={{ color: "var(--cycle-accent)" }}>
-            the contact page
-          </a>{" "}
-          or email{" "}
-          <a href="mailto:jay@vibed-lab.com" style={{ color: "var(--cycle-accent)" }}>
-            jay@vibed-lab.com
-          </a>
-          .
-        </p>
-      </div>
-    </article>
+      </article>
+    </>
   );
 }
