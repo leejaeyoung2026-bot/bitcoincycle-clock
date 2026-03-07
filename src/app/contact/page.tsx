@@ -119,65 +119,6 @@ export default function ContactPage() {
         </a>
       </section>
 
-      <section className="mb-10">
-        <h2
-          className="text-xl mb-3"
-          style={{ fontFamily: "var(--font-serif)" }}
-        >
-          Other Vibed Lab Projects
-        </h2>
-        <p className="mb-4 leading-relaxed">
-          BitcoinCycle Clock is part of{" "}
-          <a
-            href="https://vibed-lab.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "var(--cycle-accent)" }}
-          >
-            Vibed Lab
-          </a>
-          , a small portfolio of focused tools. You might also find these
-          useful:
-        </p>
-        <div className="space-y-3">
-          <div
-            className="p-4 rounded-lg border"
-            style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
-          >
-            <a
-              href="https://backtest.vibed-lab.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium"
-              style={{ color: "var(--cycle-accent)", fontFamily: "var(--font-serif)" }}
-            >
-              CryptoBacktest
-            </a>
-            <p className="text-sm mt-1" style={{ color: "var(--ink-muted)" }}>
-              backtest.vibed-lab.com — Backtest historical trading strategies
-              against real Bitcoin and crypto price data.
-            </p>
-          </div>
-          <div
-            className="p-4 rounded-lg border"
-            style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
-          >
-            <a
-              href="https://clearrx.vibed-lab.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium"
-              style={{ color: "var(--cycle-accent)", fontFamily: "var(--font-serif)" }}
-            >
-              ClearRx
-            </a>
-            <p className="text-sm mt-1" style={{ color: "var(--ink-muted)" }}>
-              clearrx.vibed-lab.com — Clear, plain-language explanations of
-              prescription medications and drug interactions.
-            </p>
-          </div>
-        </div>
-      </section>
     </article>
   );
 }
