@@ -182,6 +182,26 @@ const glossaryTerms: GlossaryTerm[] = [
     definition:
       "Stands for Unspent Transaction Output \u2014 the fundamental unit of Bitcoin ownership on the blockchain. Every bitcoin balance is actually a collection of UTXOs. Analysts study UTXO age distribution and profit/loss status to understand holder behavior and identify cycle phases.",
   },
+  {
+    term: "Bitcoin Dominance",
+    definition:
+      "The percentage of the total cryptocurrency market capitalization that belongs to Bitcoin. During Bitcoin's early bull market phases, dominance typically rises as BTC leads the charge. Later in the cycle, dominance often falls as investors rotate profits into altcoins, signaling the alt season. Watching dominance trends helps identify where the cycle is maturing.",
+  },
+  {
+    term: "Altcoin Season",
+    definition:
+      "A period in the crypto market cycle when smaller cryptocurrencies (altcoins) significantly outperform Bitcoin. Typically occurs in the later stages of a bull market when Bitcoin dominance is falling. Historically, altcoin seasons have marked the final euphoric phase before major corrections.",
+  },
+  {
+    term: "Bleed Phase",
+    definition:
+      "A prolonged period of slow, grinding price decline following a market top. Unlike a sharp crash, the bleed phase can last months as sentiment gradually deteriorates and latecomers sell into strength. This phase tests long-term holders and sets the stage for the next accumulation cycle.",
+  },
+  {
+    term: "Network Value to Transactions (NVT)",
+    definition:
+      "An on-chain valuation metric that compares Bitcoin's market cap to the dollar volume of transactions settling on the network. Similar to the price-to-earnings ratio in equities, a high NVT suggests the network may be overvalued relative to its transaction utility. A sharp rise in NVT with stagnant on-chain volume can signal a speculative bubble.",
+  },
 ];
 
 /* Group terms alphabetically */

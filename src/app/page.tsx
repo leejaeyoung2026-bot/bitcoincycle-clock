@@ -582,6 +582,7 @@ export default function Home() {
               { href: "/learn/dollar-cost-averaging-bitcoin", text: "Dollar Cost Averaging Bitcoin" },
               { href: "/learn/bitcoin-fear-greed-index", text: "Fear and Greed Index: Reading Market Emotions" },
               { href: "/learn/on-chain-vs-technical-analysis", text: "On-Chain vs Technical Analysis" },
+              { href: "/learn/bitcoin-dominance-cycles", text: "Bitcoin Dominance Cycles: Reading Market Share" },
             ].map((link) => (
               <li key={link.href}>
                 <Link href={link.href} style={{ color: "var(--cycle-accent)" }}>
