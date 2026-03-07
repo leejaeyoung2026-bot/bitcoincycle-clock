@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Learn",
   description:
-    "Educational articles about Bitcoin halving cycles, on-chain indicators, and market analysis.",
+    "Educational articles about Bitcoin halving cycles, on-chain indicators, and market analysis. Written by Jay, Bitcoin investor since 2017.",
 };
 
 const articles = [
@@ -14,6 +14,34 @@ const articles = [
     description:
       "How Bitcoin halvings create predictable market cycles and what indicators reveal about each phase.",
     readTime: "5 min read",
+  },
+  {
+    slug: "mvrv-z-score-explained",
+    title: "MVRV Z-Score Explained: The Most Reliable Bitcoin Cycle Indicator",
+    description:
+      "What market cap vs realized cap means, how the Z-Score works, and why it has called every major top and bottom.",
+    readTime: "5 min read",
+  },
+  {
+    slug: "pi-cycle-top-indicator",
+    title: "Pi Cycle Top Indicator: How Two Moving Averages Called Every Bitcoin Peak",
+    description:
+      "The math behind the 111-day and 350-day moving averages, why their ratio approximates pi, and historical accuracy.",
+    readTime: "4 min read",
+  },
+  {
+    slug: "bitcoin-halving-history",
+    title: "Bitcoin Halving History: What Happened After Each Supply Cut",
+    description:
+      "Detailed timeline of all four halvings, price performance after each event, and the diminishing returns pattern.",
+    readTime: "6 min read",
+  },
+  {
+    slug: "puell-multiple-guide",
+    title: "Puell Multiple: Reading Miner Stress to Time the Bitcoin Market",
+    description:
+      "How daily miner issuance value signals cycle extremes, and why halvings mechanically reset this indicator.",
+    readTime: "4 min read",
   },
 ];
 
@@ -28,6 +56,8 @@ export default function LearnPage() {
       </h1>
       <p className="mb-8" style={{ color: "var(--ink-muted)" }}>
         Educational articles about Bitcoin market cycles and on-chain analysis.
+        Written by Jay, a Bitcoin investor since 2017 who has survived two
+        complete market cycles.
       </p>
       <div className="space-y-4">
         {articles.map((a) => (

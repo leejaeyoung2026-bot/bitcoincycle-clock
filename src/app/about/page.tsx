@@ -1,17 +1,39 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About — Jay, Bitcoin Investor Since 2017",
   description:
-    "About BitcoinCycle Clock and its creator Jay, a Bitcoin investor since 2017.",
+    "About BitcoinCycle Clock and its creator Jay — a Bitcoin investor since 2017 who has survived two complete market cycles and built tools for cycle-aware investing.",
 };
 
 export default function AboutPage() {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Jay",
+    description:
+      "Bitcoin investor since 2017 and creator of BitcoinCycle Clock and CryptoBacktest. Survived two complete Bitcoin market cycles.",
+    knowsAbout: [
+      "Bitcoin Market Cycles",
+      "On-Chain Analysis",
+      "MVRV Z-Score",
+      "Cryptocurrency Investment",
+      "Technical Analysis",
+    ],
+    url: "https://cycle.vibed-lab.com/about",
+    sameAs: ["https://vibed-lab.com", "https://backtest.vibed-lab.com"],
+  };
+
   return (
     <article
       className="max-w-2xl mx-auto px-4 py-12"
       style={{ color: "var(--ink)" }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+
       <h1
         className="text-3xl mb-6"
         style={{ fontFamily: "var(--font-serif)" }}
@@ -39,7 +61,7 @@ export default function AboutPage() {
           just tells you what you need to know at a glance. BitcoinCycle
           Clock works the same way. The dial sweeps from the quiet post-bear
           Accumulation phase through Early Markup, into the Blow-off Top, and
-          then into Distribution — the full 12 o'clock rotation of a typical
+          then into Distribution — the full 12 o&apos;clock rotation of a typical
           Bitcoin market cycle, represented visually so you can orient
           yourself instantly.
         </p>
@@ -58,13 +80,13 @@ export default function AboutPage() {
           Why Cycles Matter
         </h2>
         <p className="mb-4 leading-relaxed">
-          Bitcoin's 4-year halving schedule creates a recurring supply shock
+          Bitcoin&apos;s 4-year halving schedule creates a recurring supply shock
           that no other asset class has. Every 210,000 blocks — approximately
           every four years — the reward that miners receive for validating
           transactions is cut in half. Fewer new coins entering circulation
           while demand continues to grow is a textbook recipe for price
           appreciation, and history has confirmed this pattern three times
-          since Bitcoin's genesis block in 2009.
+          since Bitcoin&apos;s genesis block in 2009.
         </p>
         <p className="mb-4 leading-relaxed">
           Every completed cycle has followed a remarkably consistent sequence
@@ -95,8 +117,8 @@ export default function AboutPage() {
           About the Creator
         </h2>
         <p className="mb-4 leading-relaxed">
-          I'm Jay, a Bitcoin investor since 2017. I have survived two
-          complete market cycles — the euphoria of 2017's bull run to $20K,
+          I&apos;m Jay, a Bitcoin investor since 2017. I have survived two
+          complete market cycles — the euphoria of 2017&apos;s bull run to $20K,
           the despair of the 2018 crash to $3,200, the 2021 surge to $69K,
           and the brutal 2022 winter down to $16K. These experiences taught
           me that cycles are the most reliable pattern in crypto, and that
@@ -117,6 +139,26 @@ export default function AboutPage() {
           stands — not hype, not doom, just a calibrated position on the dial.
         </p>
       </section>
+
+      {/* Credentials Box */}
+      <div
+        className="p-5 rounded-lg border text-sm mb-10"
+        style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+      >
+        <p
+          className="font-mono text-xs uppercase mb-3"
+          style={{ color: "var(--cycle-accent)" }}
+        >
+          Experience &amp; Credentials
+        </p>
+        <ul className="space-y-2 list-disc list-inside" style={{ color: "var(--ink-muted)" }}>
+          <li><strong>Bitcoin investor since 2017</strong> — survived 2 complete market cycles</li>
+          <li><strong>Creator of CryptoBacktest</strong> — historical trading strategy backtesting tool</li>
+          <li><strong>On-chain analysis practitioner</strong> — MVRV, Pi Cycle, Puell, S2F</li>
+          <li><strong>Licensed pharmacist</strong> — analytical and data-driven professional background</li>
+          <li><strong>Vibed Lab founder</strong> — building focused tools for independent investors</li>
+        </ul>
+      </div>
 
       <section className="mb-10">
         <h2
@@ -148,6 +190,35 @@ export default function AboutPage() {
         </p>
       </section>
 
+      {/* Data Sources & Methodology */}
+      <section className="mb-10">
+        <h2
+          className="text-xl mb-3"
+          style={{ fontFamily: "var(--font-serif)" }}
+        >
+          Data Sources &amp; Methodology
+        </h2>
+        <p className="mb-4 leading-relaxed">
+          Price data is sourced from the CoinGecko API, one of the most widely
+          used cryptocurrency data aggregators. Historical cycle data — including
+          halving dates, previous cycle price trajectories, and indicator baselines —
+          is pre-computed and bundled with the application for instant load times.
+        </p>
+        <p className="mb-4 leading-relaxed">
+          On-chain indicators like MVRV and Puell Multiple require data that is
+          not freely available in real-time from public APIs. For these metrics,
+          BitcoinCycle Clock uses approximation models based on historical realized
+          price trends and known issuance schedules. All approximate values are
+          clearly labeled as such on the dashboard.
+        </p>
+        <p className="leading-relaxed">
+          The cycle clock position is calculated using the elapsed time since the
+          most recent halving (April 19, 2024) relative to the expected ~1,460-day
+          cycle length. This is a structural measurement, not a prediction — it
+          tells you where you are on the map, not where the destination is.
+        </p>
+      </section>
+
       <section className="mb-10">
         <h2
           className="text-xl mb-3"
@@ -166,29 +237,95 @@ export default function AboutPage() {
             Vibed Lab
           </a>
           , a collection of focused, no-frills tools for investors and
-          developers. If you want to go deeper than cycle awareness and
-          actually test historical trading strategies against real Bitcoin
-          price data, check out{" "}
-          <a
-            href="https://backtest.vibed-lab.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "var(--cycle-accent)" }}
+          developers. Other projects include:
+        </p>
+        <div className="space-y-3">
+          <div
+            className="p-4 rounded-lg border"
+            style={{ borderColor: "var(--border)", background: "var(--cream)" }}
           >
-            CryptoBacktest
-          </a>{" "}
-          — our tool for historical trading strategy backtesting. Run
-          simulations, compare entry and exit timing, and see what your
-          strategy would have returned across every major Bitcoin cycle.
-        </p>
-        <p className="leading-relaxed" style={{ color: "var(--ink-muted)" }}>
-          <em>
-            This site is for educational and informational purposes only. It
-            does not constitute financial or investment advice. Always do your
-            own research before making any investment decision.
-          </em>
-        </p>
+            <a
+              href="https://backtest.vibed-lab.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium"
+              style={{ color: "var(--cycle-accent)", fontFamily: "var(--font-serif)" }}
+            >
+              CryptoBacktest
+            </a>
+            <p className="text-sm mt-1" style={{ color: "var(--ink-muted)" }}>
+              backtest.vibed-lab.com — Backtest historical trading strategies
+              against real Bitcoin and crypto price data.
+            </p>
+          </div>
+          <div
+            className="p-4 rounded-lg border"
+            style={{ borderColor: "var(--border)", background: "var(--cream)" }}
+          >
+            <a
+              href="https://clearrx.vibed-lab.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium"
+              style={{ color: "var(--cycle-accent)", fontFamily: "var(--font-serif)" }}
+            >
+              ClearRx
+            </a>
+            <p className="text-sm mt-1" style={{ color: "var(--ink-muted)" }}>
+              clearrx.vibed-lab.com — Drug interaction checker with visual network
+              diagrams, written by a licensed pharmacist.
+            </p>
+          </div>
+        </div>
       </section>
+
+      {/* Explore Links */}
+      <section className="mb-10">
+        <h2
+          className="text-xl mb-3"
+          style={{ fontFamily: "var(--font-serif)" }}
+        >
+          Explore BitcoinCycle Clock
+        </h2>
+        <div className="flex flex-wrap gap-3 text-sm">
+          <a
+            href="/"
+            className="px-4 py-2 rounded-lg border transition-colors"
+            style={{ borderColor: "var(--border)", color: "var(--ink-muted)" }}
+          >
+            Cycle Dashboard
+          </a>
+          <a
+            href="/learn"
+            className="px-4 py-2 rounded-lg border transition-colors"
+            style={{ borderColor: "var(--border)", color: "var(--ink-muted)" }}
+          >
+            Learn
+          </a>
+          <a
+            href="/faq"
+            className="px-4 py-2 rounded-lg border transition-colors"
+            style={{ borderColor: "var(--border)", color: "var(--ink-muted)" }}
+          >
+            FAQ
+          </a>
+          <a
+            href="/contact"
+            className="px-4 py-2 rounded-lg border transition-colors"
+            style={{ borderColor: "var(--border)", color: "var(--ink-muted)" }}
+          >
+            Contact
+          </a>
+        </div>
+      </section>
+
+      <p className="leading-relaxed text-sm" style={{ color: "var(--ink-muted)" }}>
+        <em>
+          This site is for educational and informational purposes only. It
+          does not constitute financial or investment advice. Always do your
+          own research before making any investment decision.
+        </em>
+      </p>
     </article>
   );
 }
