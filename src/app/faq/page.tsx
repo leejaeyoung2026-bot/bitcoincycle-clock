@@ -97,6 +97,16 @@ const faqs = [
     answer:
       "BitcoinCycle Clock was built by Jay, a Bitcoin investor since 2017 who has lived through two full market cycles. The project is part of Vibed Lab, a suite of investor-focused tools. Jay’s motivation was to create the simple, at-a-glance cycle dashboard he wished he had during the 2017 bull run — one that replaces information overload with a single, intuitive reading.",
   },
+  {
+    question: "What is Bitcoin dominance and why does it matter?",
+    answer:
+      "Bitcoin dominance is the percentage of the total cryptocurrency market cap that belongs to Bitcoin. During early bull markets, dominance typically rises as BTC leads price appreciation. Later in the cycle, dominance falls as investors rotate profits into altcoins. This rotation — often called alt season — historically signals a maturing bull market and approaching cycle top. Tracking dominance trends alongside on-chain indicators gives a more complete picture of where the cycle stands.",
+  },
+  {
+    question: "What is alt season and how do I recognize it?",
+    answer:
+      "Alt season is a period when smaller cryptocurrencies dramatically outperform Bitcoin, often rising 3-10x while Bitcoin consolidates. It typically occurs in the later stages of a bull market when Bitcoin dominance drops from its highs. Classic signs include: Bitcoin dominance falling below 40-45%, retail excitement about obscure coins, parabolic moves across mid and small-cap tokens, and euphoric sentiment in the Fear and Greed Index. Alt seasons have historically preceded major market corrections.",
+  },
 ];
 
 const jsonLd = {
