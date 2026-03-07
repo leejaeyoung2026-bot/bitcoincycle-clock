@@ -580,6 +580,8 @@ export default function Home() {
               { href: "/learn/pi-cycle-top-indicator", text: "Pi Cycle Top Indicator" },
               { href: "/learn/bitcoin-halving-history", text: "Bitcoin Halving History" },
               { href: "/learn/dollar-cost-averaging-bitcoin", text: "Dollar Cost Averaging Bitcoin" },
+              { href: "/learn/bitcoin-fear-greed-index", text: "Fear and Greed Index: Reading Market Emotions" },
+              { href: "/learn/on-chain-vs-technical-analysis", text: "On-Chain vs Technical Analysis" },
             ].map((link) => (
               <li key={link.href}>
                 <Link href={link.href} style={{ color: "var(--cycle-accent)" }}>
@@ -590,7 +592,7 @@ export default function Home() {
           </ul>
           <p>
             <Link href="/learn" style={{ color: "var(--cycle-accent)" }}>
-              View all 7 articles →
+              View all 10 articles →
             </Link>
           </p>
         </section>
