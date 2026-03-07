@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { useCycleData } from "@/hooks/useCycleData";
 import { formatCycleTime, getPhaseLabel, getPhaseColor } from "@/lib/cycle-engine";
 import CycleClock from "@/components/CycleClock";
@@ -271,6 +272,35 @@ export default function Home() {
         </section>
 
         {/* ----------------------------------------------------------------
+            6b. Trust Stats
+        ---------------------------------------------------------------- */}
+        <section className="mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "4", label: "On-chain indicators" },
+              { value: "3", label: "Cycles tracked" },
+              { value: "2017", label: "Investing since" },
+              { value: "7", label: "Learn articles" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p
+                  className="text-2xl font-bold"
+                  style={{ fontFamily: "var(--font-mono)", color: "var(--cycle-accent)" }}
+                >
+                  {stat.value}
+                </p>
+                <p
+                  className="text-xs mt-1"
+                  style={{ color: "var(--ink-muted)" }}
+                >
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ----------------------------------------------------------------
             7. Historical Cycle Overlay
         ---------------------------------------------------------------- */}
         <section className="mb-10">
@@ -380,7 +410,10 @@ export default function Home() {
             halving was followed by the celebrated 2017 bull run. The 2020 halving led to the
             all-time highs of late 2021. While past performance does not guarantee future results,
             the structural supply shock of each halving continues to be one of the most closely
-            watched events in the cryptocurrency space.
+            watched events in the cryptocurrency space.{" "}
+            <Link href="/learn/bitcoin-halving-history" style={{ color: "var(--cycle-accent)" }}>
+              See the full halving timeline →
+            </Link>
           </p>
 
           {/* Understanding the Indicators */}
@@ -413,7 +446,10 @@ export default function Home() {
             standard deviations from the historical mean. Values below zero suggest the market is
             undervalued relative to the cost basis of all holders, historically a buying
             opportunity. Values above 7 have historically coincided with cycle tops. The current
-            reading gives a snapshot of whether the broad market is stretched or oversold.
+            reading gives a snapshot of whether the broad market is stretched or oversold.{" "}
+            <Link href="/learn/mvrv-z-score-explained" style={{ color: "var(--cycle-accent)" }}>
+              Read the full guide →
+            </Link>
           </p>
 
           <h3
@@ -429,7 +465,10 @@ export default function Home() {
             the 111-day MA approaches and crosses above 2x the 350-day MA — pushing the ratio
             toward 1.0 — the indicator has historically signaled a cycle top within days. On the
             gauge, a ratio below 0.6 is considered cool, while values approaching 0.95 are
-            historically associated with topping conditions.
+            historically associated with topping conditions.{" "}
+            <Link href="/learn/pi-cycle-top-indicator" style={{ color: "var(--cycle-accent)" }}>
+              Read the full guide →
+            </Link>
           </p>
 
           <h3
@@ -445,7 +484,10 @@ export default function Home() {
             selling pressure. When the Puell Multiple is extremely low (below 0.5), miners are
             earning far less than their annual average — often coinciding with capitulation bottoms.
             When it is extremely high (above 4), miners are earning multiples of their annual
-            average and are incentivized to sell aggressively, historically marking cycle tops.
+            average and are incentivized to sell aggressively, historically marking cycle tops.{" "}
+            <Link href="/learn/puell-multiple-guide" style={{ color: "var(--cycle-accent)" }}>
+              Read the full guide →
+            </Link>
           </p>
 
           <h3
@@ -461,7 +503,10 @@ export default function Home() {
             shows how far the current price sits above or below that model price, expressed as a
             percentage. A reading of +100% means Bitcoin trades at double the model price —
             historically associated with euphoric tops — while a deeply negative reading suggests
-            undervaluation relative to the scarcity model.
+            undervaluation relative to the scarcity model.{" "}
+            <Link href="/learn/stock-to-flow-model" style={{ color: "var(--cycle-accent)" }}>
+              Read the full guide →
+            </Link>
           </p>
 
           {/* Why Cycles Matter */}
@@ -485,7 +530,10 @@ export default function Home() {
             investors use. Rather than trying to time the market perfectly, cycle awareness helps
             you calibrate expectations, avoid panic-selling in bear markets, and maintain
             conviction during volatile periods. The clock is a tool for informed perspective —
-            not a trading signal.
+            not a trading signal.{" "}
+            <Link href="/learn/dollar-cost-averaging-bitcoin" style={{ color: "var(--cycle-accent)" }}>
+              Learn about cycle-aware DCA →
+            </Link>
           </p>
 
           {/* About the Creator */}
