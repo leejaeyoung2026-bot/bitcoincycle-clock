@@ -195,6 +195,15 @@ function groupByLetter(terms: GlossaryTerm[]): Record<string, GlossaryTerm[]> {
   return groups;
 }
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://cycle.vibed-lab.com" },
+    { "@type": "ListItem", position: 2, name: "Glossary", item: "https://cycle.vibed-lab.com/glossary" },
+  ],
+};
+
 export default function GlossaryPage() {
   const grouped = groupByLetter(glossaryTerms);
   const letters = Object.keys(grouped).sort();
@@ -221,6 +230,10 @@ export default function GlossaryPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
 
       {/* Header */}
