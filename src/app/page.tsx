@@ -13,10 +13,10 @@ import { IndicatorConfig } from "@/types/cycle";
 
 // Gauge display ranges for each indicator
 const GAUGE_RANGES: Record<string, { min: number; max: number }> = {
-  mvrv: { min: -2, max: 10 },
-  piCycle: { min: 0, max: 1.2 },
-  puellMultiple: { min: 0, max: 6 },
-  s2fDeviation: { min: -100, max: 500 },
+  mvrv: { min: -1, max: 8 },
+  piCycle: { min: 0, max: 1.1 },
+  puellMultiple: { min: 0, max: 5 },
+  s2fDeviation: { min: -100, max: 200 },
 };
 
 export default function Home() {

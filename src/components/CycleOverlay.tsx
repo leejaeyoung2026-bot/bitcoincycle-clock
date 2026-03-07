@@ -149,8 +149,9 @@ function drawChart(
     ctx.lineJoin = "round";
     ctx.lineCap = "round";
 
+    const sortedData = [...cycle.data].sort((a, b) => a.day - b.day);
     let started = false;
-    for (const point of cycle.data) {
+    for (const point of sortedData) {
       if (point.day > X_MAX_DAYS) break;
       const xPx = xScale(point.day, chartW);
       const yPx = yScale(point.normalized, chartH);

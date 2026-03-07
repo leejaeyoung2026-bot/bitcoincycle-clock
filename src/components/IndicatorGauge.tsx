@@ -55,11 +55,9 @@ function describeGaugeArc(
 ): string {
   const start = gaugeAngleToCartesian(cx, cy, r, startDeg);
   const end = gaugeAngleToCartesian(cx, cy, r, endDeg);
-  // sweep-flag = 0 means counter-clockwise in SVG coords (which is clockwise
-  // visually because SVG y-axis is flipped). We go from the left-side point
-  // over the top to the right — that is the counter-clockwise arc in SVG.
   const largeArc = endDeg - startDeg > 180 ? 1 : 0;
-  return `M ${start.x} ${start.y} A ${r} ${r} 0 ${largeArc} 0 ${end.x} ${end.y}`;
+  // sweep-flag = 1 (clockwise in SVG coords) draws the arc through the top
+  return `M ${start.x} ${start.y} A ${r} ${r} 0 ${largeArc} 1 ${end.x} ${end.y}`;
 }
 
 // -----------------------------------------------------------------------

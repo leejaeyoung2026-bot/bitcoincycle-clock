@@ -30,8 +30,8 @@
     "description": "Daily coin issuance value vs 365-day average. High values signal miner profit-taking.",
     "zones": [
       { "label": "Undervalued", "min": 0, "max": 0.5, "color": "var(--phase-accumulation)" },
-      { "label": "Fair", "min": 0.5, "max": 1.2, "color": "var(--gauge-mid)" },
-      { "label": "Overheated", "min": 1.2, "max": 4, "color": "var(--gauge-high)" },
+      { "label": "Fair", "min": 0.5, "max": 1.5, "color": "var(--gauge-mid)" },
+      { "label": "Elevated", "min": 1.5, "max": 4, "color": "var(--gauge-high)" },
       { "label": "Extreme", "min": 4, "max": 999, "color": "var(--gauge-extreme)" }
     ]
   },
