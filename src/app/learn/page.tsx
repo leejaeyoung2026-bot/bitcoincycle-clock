@@ -78,6 +78,13 @@ const articles = [
       "Comparing on-chain and technical analysis, when each excels, and how BitcoinCycle Clock integrates both.",
     readTime: "6 min read",
   },
+  {
+    slug: "bitcoin-dominance-cycles",
+    title: "Bitcoin Dominance Cycles: What BTC Market Share Tells You About the Cycle",
+    description:
+      "How Bitcoin dominance shifts across cycles, why altseason signals a maturing bull market, and using dominance as a timing tool.",
+    readTime: "6 min read",
+  },
 ];
 
 const jsonLd = {

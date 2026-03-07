@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/learn/bitcoin-fear-greed-index`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/learn/bitcoin-rainbow-chart`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/learn/on-chain-vs-technical-analysis`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/learn/bitcoin-dominance-cycles`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/glossary`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
   ];
 }

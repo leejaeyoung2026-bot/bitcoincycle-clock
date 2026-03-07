@@ -76,6 +76,7 @@ export const metadata: Metadata = {
       "Real-time Bitcoin market cycle dashboard with MVRV, Pi Cycle, Puell Multiple, and S2F indicators.",
   },
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://cycle.vibed-lab.com" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
