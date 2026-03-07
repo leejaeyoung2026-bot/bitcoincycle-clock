@@ -80,9 +80,37 @@ const articles = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Bitcoin Cycle Learning Hub",
+  description:
+    "Educational articles about Bitcoin halving cycles, on-chain indicators, and market analysis.",
+  url: "https://cycle.vibed-lab.com/learn",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "BitcoinCycle Clock",
+    url: "https://cycle.vibed-lab.com",
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: articles.length,
+    itemListElement: articles.map((a, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://cycle.vibed-lab.com/learn/${a.slug}`,
+      name: a.title,
+    })),
+  },
+};
+
 export default function LearnPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1
         className="text-3xl mb-2"
         style={{ fontFamily: "var(--font-serif)" }}

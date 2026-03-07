@@ -6,12 +6,34 @@ export const metadata: Metadata = {
     "Contact Jay, the creator of BitcoinCycle Clock, for feedback, bug reports, or partnership inquiries.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact BitcoinCycle Clock",
+  url: "https://cycle.vibed-lab.com/contact",
+  mainEntity: {
+    "@type": "Organization",
+    name: "BitcoinCycle Clock",
+    url: "https://cycle.vibed-lab.com",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "jay@vibed-lab.com",
+      contactType: "customer support",
+      availableLanguage: "English",
+    },
+  },
+};
+
 export default function ContactPage() {
   return (
     <article
       className="max-w-2xl mx-auto px-4 py-12"
       style={{ color: "var(--ink)" }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1
         className="text-3xl mb-4"
         style={{ fontFamily: "var(--font-serif)" }}
