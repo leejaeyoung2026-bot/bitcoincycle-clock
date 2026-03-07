@@ -212,10 +212,19 @@ export default function AboutPage() {
           Data Sources &amp; Methodology
         </h2>
         <p className="mb-4 leading-relaxed">
-          Price data is sourced from the CoinGecko API, one of the most widely
-          used cryptocurrency data aggregators. Historical cycle data — including
-          halving dates, previous cycle price trajectories, and indicator baselines —
-          is pre-computed and bundled with the application for instant load times.
+          Price data is sourced from the{" "}
+          <a
+            href="https://www.coingecko.com/en/api"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "var(--accent)", textDecoration: "underline" }}
+          >
+            CoinGecko API
+          </a>
+          , one of the most widely used cryptocurrency data aggregators.
+          Historical cycle data — including halving dates, previous cycle price
+          trajectories, and indicator baselines — is pre-computed and bundled
+          with the application for instant load times.
         </p>
         <p className="mb-4 leading-relaxed">
           On-chain indicators like MVRV and Puell Multiple require data that is

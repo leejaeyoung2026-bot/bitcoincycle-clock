@@ -98,15 +98,32 @@ export default function Footer() {
             Not financial advice.
           </p>
 
-          <a
-            href="https://vibed-lab.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Vibed Lab"
-            className="opacity-35 hover:opacity-70 transition-opacity"
-          >
-            <VibedLabLogo height={18} />
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.coingecko.com/en/api"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-40 hover:opacity-80 transition-opacity"
+              style={{
+                fontSize: "0.72rem",
+                color: "var(--ink-disabled)",
+                textDecoration: "none",
+                letterSpacing: "0.01em",
+              }}
+            >
+              Powered by CoinGecko API
+            </a>
+
+            <a
+              href="https://vibed-lab.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Vibed Lab"
+              className="opacity-35 hover:opacity-70 transition-opacity"
+            >
+              <VibedLabLogo height={18} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
