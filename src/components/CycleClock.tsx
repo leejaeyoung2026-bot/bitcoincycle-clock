@@ -19,6 +19,7 @@ interface ClockColors {
   ink: string;
   inkMuted: string;
   border: string;
+  bgElevated: string;
 }
 
 function readCssColors(): ClockColors {
@@ -34,6 +35,7 @@ function readCssColors(): ClockColors {
     ink: get("--ink", "#111318"),
     inkMuted: get("--ink-muted", "#7A8292"),
     border: get("--border", "#D4D8DF"),
+    bgElevated: get("--bg-elevated", "#FFFFFF"),
   };
 }
 
@@ -210,18 +212,38 @@ function drawClock(
 
   // ------------------------------------------------------------------
   // 7. Center text: Day, "of ~1,460", Phase name
+  //    A background disc masks the hand behind the text area.
   // ------------------------------------------------------------------
   const dayFontSize = Math.max(16, size * 0.068);
   const subFontSize = Math.max(11, size * 0.033);
   const phaseNameSize = Math.max(10, size * 0.03);
+  const lineSpacing = dayFontSize * 0.25;
+  const textBlockTop = cy - dayFontSize * 0.8;
+
+  // Calculate the furthest text extent from center to determine mask radius
+  const textBottom =
+    textBlockTop + dayFontSize * 0.9 + lineSpacing + subFontSize * 1.3 + phaseNameSize * 0.35;
+  const textTop = textBlockTop - dayFontSize * 0.75;
+  const maskRadius =
+    Math.max(Math.abs(textBottom - cy), Math.abs(textTop - cy)) + size * 0.02;
+
+  // Background disc — masks the hand behind center text
+  ctx.beginPath();
+  ctx.arc(cx, cy, maskRadius, 0, 2 * Math.PI);
+  ctx.fillStyle = colors.bgElevated;
+  ctx.fill();
+
+  // Re-draw center hub dot on top of the mask
+  ctx.beginPath();
+  ctx.arc(cx, cy, size * 0.010, 0, 2 * Math.PI);
+  ctx.fillStyle = colors.border;
+  ctx.fill();
 
   // "Day N" — large
   ctx.fillStyle = colors.ink;
   ctx.font = `600 ${dayFontSize}px system-ui, sans-serif`;
   ctx.textAlign = "center";
   ctx.textBaseline = "alphabetic";
-  const lineSpacing = dayFontSize * 0.25;
-  const textBlockTop = cy - dayFontSize * 0.8;
 
   ctx.fillText(`Day ${props.dayInCycle}`, cx, textBlockTop);
 
