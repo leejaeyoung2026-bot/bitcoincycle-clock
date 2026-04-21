@@ -46,8 +46,9 @@ function drawClock(
 ): void {
   const cx = size / 2;
   const cy = size / 2;
-  // Inset the radius to leave room for phase labels outside
-  const radius = size * 0.36;
+  // Inset the radius to leave room for phase labels outside.
+  // Slightly smaller ratio at narrow sizes ensures corner labels fit.
+  const radius = size * 0.33;
 
   const colors = readCssColors();
 
@@ -133,8 +134,8 @@ function drawClock(
   // 4. Phase labels — positioned at the midpoint angle of each arc
   //    outside the arc ring
   // ------------------------------------------------------------------
-  const labelRadius = radius + ARC_WIDTH / 2 + size * 0.065;
-  const labelFontSize = Math.max(9, size * 0.026);
+  const labelRadius = radius + ARC_WIDTH / 2 + size * 0.055;
+  const labelFontSize = Math.max(8, size * 0.024);
   ctx.font = `500 ${labelFontSize}px system-ui, sans-serif`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
