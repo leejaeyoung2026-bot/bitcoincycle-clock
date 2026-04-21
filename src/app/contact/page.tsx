@@ -108,9 +108,9 @@ export default function ContactPage() {
           href="https://github.com/leejaeyoung2026-bot/bitcoincycle-clock"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block font-mono text-sm px-4 py-3 rounded-lg border transition-colors"
+          className="inline-block font-mono text-sm px-4 py-3 rounded-lg border transition-colors hover:opacity-80"
           style={{
-            color: "var(--ink-muted)",
+            color: "var(--cycle-accent)",
             borderColor: "var(--border)",
             background: "var(--bg-elevated)",
           }}
