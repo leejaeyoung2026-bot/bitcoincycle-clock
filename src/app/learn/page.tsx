@@ -120,7 +120,7 @@ const jsonLd = {
 
 export default function LearnPage() {
   return (
-    <>
+    <div className="max-w-6xl mx-auto px-4 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -136,7 +136,7 @@ export default function LearnPage() {
         Written by Jay, a Bitcoin investor since 2017 who has survived two
         complete market cycles.
       </p>
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {articles.map((a) => (
           <Link
             key={a.slug}
@@ -162,6 +162,6 @@ export default function LearnPage() {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   );
 }
