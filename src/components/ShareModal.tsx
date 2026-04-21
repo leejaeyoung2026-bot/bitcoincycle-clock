@@ -87,7 +87,7 @@ export default function ShareModal({
     const url = typeof window !== "undefined" ? window.location.href : "https://cycle.vibed-lab.com";
     navigator.clipboard.writeText(url).then(() => {
       setCopyState("copied");
-      setTimeout(() => setCopyState("idle"), 2000);
+      setTimeout(() => setCopyState("idle"), 1500);
     });
   }
 
@@ -109,7 +109,7 @@ export default function ShareModal({
       ? "Failed — try again"
       : "Download PNG";
 
-  const copyLabel = copyState === "copied" ? "Copied!" : "Copy Link";
+  const copyLabel = copyState === "copied" ? "✓ Copied!" : "Copy Link";
 
   return (
     <>
@@ -261,11 +261,12 @@ export default function ShareModal({
                 justifyContent: "center",
                 gap: "8px",
                 width: "100%",
+                minWidth: "140px",
                 padding: "12px 20px",
                 borderRadius: "var(--radius-md)",
                 border: "1px solid var(--border)",
-                background: "transparent",
-                color: "var(--ink)",
+                background: copyState === "copied" ? "var(--bg-inset)" : "transparent",
+                color: copyState === "copied" ? "var(--ink)" : "var(--ink)",
                 fontSize: "14px",
                 fontWeight: 500,
                 cursor: "pointer",
