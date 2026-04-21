@@ -290,7 +290,7 @@ export default function GlossaryPage() {
       {letters.map((letter) => (
         <section key={letter} id={`letter-${letter}`} className="mb-10">
           <h2
-            className="text-2xl mb-4 pb-2 border-b"
+            className="text-2xl mb-4 pb-2 border-b scroll-mt-20"
             style={{
               fontFamily: "var(--font-serif)",
               borderColor: "var(--border)",
