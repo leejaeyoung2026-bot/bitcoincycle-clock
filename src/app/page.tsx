@@ -203,7 +203,7 @@ export default function Home() {
             4. Ad Unit (first)
         ---------------------------------------------------------------- */}
         <section style={{ marginBottom: "28px" }}>
-          <AdUnit slot="1234567890" format="auto" />
+          <AdUnit slotEnvKey="NEXT_PUBLIC_ADSENSE_SLOT_BELOW_FOLD" format="auto" />
         </section>
 
         {/* ----------------------------------------------------------------
@@ -354,7 +354,7 @@ export default function Home() {
             8. Ad Unit (second)
         ---------------------------------------------------------------- */}
         <section style={{ marginBottom: "40px" }}>
-          <AdUnit slot="0987654321" format="auto" />
+          <AdUnit slotEnvKey="NEXT_PUBLIC_ADSENSE_SLOT_BELOW_CHART" format="auto" />
         </section>
 
         {/* ----------------------------------------------------------------

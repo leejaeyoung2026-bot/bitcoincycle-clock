@@ -1,5 +1,21 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## AdSense Setup
+
+Copy `.env.example` to `.env.local` and fill in your AdSense credentials:
+
+```bash
+cp .env.example .env.local
+```
+
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_ADSENSE_CLIENT` | Your publisher ID (`ca-pub-XXXXXXXX`) |
+| `NEXT_PUBLIC_ADSENSE_SLOT_BELOW_FOLD` | Slot ID for the ad below the fold on the home page |
+| `NEXT_PUBLIC_ADSENSE_SLOT_BELOW_CHART` | Slot ID for the ad below the chart on the home page |
+
+If any of these are missing or empty the ad unit renders `null` — no broken requests.
+
 ## Getting Started
 
 First, run the development server:

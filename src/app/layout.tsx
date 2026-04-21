@@ -99,13 +99,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
-        {/* AdSense */}
-        <meta name="google-adsense-account" content="ca-pub-6874320463657568" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6874320463657568"
-          crossOrigin="anonymous"
-        />
+        {/* AdSense — script only renders when the client ID env var is set */}
+        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT && (
+          <>
+            <meta name="google-adsense-account" content={process.env.NEXT_PUBLIC_ADSENSE_CLIENT} />
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+              crossOrigin="anonymous"
+            />
+          </>
+        )}
         <link rel="manifest" href="/manifest.json" />
         <JsonLd />
       </head>
