@@ -16,7 +16,7 @@ const dmSerifDisplay = DM_Serif_Display({
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   variable: "--font-dm-sans",
   display: "swap",
@@ -24,7 +24,7 @@ const dmSans = DM_Sans({
 
 const dmMono = DM_Mono({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500"],
   variable: "--font-dm-mono",
   display: "swap",
 });
