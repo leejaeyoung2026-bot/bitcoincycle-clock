@@ -86,6 +86,8 @@ export function useCycleData(): CycleData {
       }
 
       // Pi Cycle Top: ratio of 111DMA to 2x350DMA
+      // Only shown when enough live price history is available; otherwise the
+      // gauge is omitted rather than displaying an invented reading.
       if (priceHistory.length >= 350) {
         const prices = priceHistory.map(([, p]) => p);
         const piValue = calculatePiCycle(prices);
@@ -94,14 +96,6 @@ export function useCycleData(): CycleData {
           value: piValue,
           zone: getIndicatorZone(piValue, thresholds["piCycle"]?.zones ?? []),
           approximate: false,
-        });
-      } else {
-        // Approximate fallback when insufficient price history
-        indicators.push({
-          key: "piCycle",
-          value: 0.72,
-          zone: getIndicatorZone(0.72, thresholds["piCycle"]?.zones ?? []),
-          approximate: true,
         });
       }
 

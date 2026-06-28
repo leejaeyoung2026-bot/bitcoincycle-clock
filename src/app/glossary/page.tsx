@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Bitcoin Cycle Glossary",
   description:
-    "Plain-English definitions of Bitcoin market cycle terms — halving, MVRV Z-Score, Puell Multiple, accumulation, distribution, and more.",
+    "Plain-English definitions of Bitcoin market cycle terms — halving, MVRV Deviation, Puell Multiple, accumulation, distribution, and more.",
 };
 
 interface GlossaryTerm {
@@ -118,9 +118,9 @@ const glossaryTerms: GlossaryTerm[] = [
       "A smoothed line that averages Bitcoin\u2019s price over a specific number of days, filtering out short-term noise. Common moving averages used in cycle analysis include the 200-day MA (a long-term trend indicator) and the 111-day and 350-day MAs used in the Pi Cycle Top indicator.",
   },
   {
-    term: "MVRV Z-Score",
+    term: "MVRV Deviation",
     definition:
-      "A ratio that compares Bitcoin\u2019s market value (current price times supply) to its realized value (the average price at which each coin last moved on-chain). When the Z-Score is high, the market is significantly overvalued relative to what holders actually paid; when it is low or negative, it suggests undervaluation. It is one of the most reliable on-chain cycle indicators.",
+      "A measure that compares Bitcoin\u2019s current price to its realized price (the average on-chain cost basis of all coins), computed as (price minus realized price) divided by realized price \u2014 equivalently, the MVRV ratio minus 1. When the deviation is high, the market is significantly overvalued relative to what holders actually paid; when it is low or negative, it suggests undervaluation. It is one of the more useful on-chain cycle indicators.",
   },
   {
     term: "Logarithmic Regression",

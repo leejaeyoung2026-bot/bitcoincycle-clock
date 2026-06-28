@@ -13,7 +13,7 @@ import { IndicatorConfig } from "@/types/cycle";
 
 // Gauge display ranges for each indicator
 const GAUGE_RANGES: Record<string, { min: number; max: number }> = {
-  mvrv: { min: -1, max: 8 },
+  mvrv: { min: -1, max: 3 },
   piCycle: { min: 0, max: 1.1 },
   puellMultiple: { min: 0, max: 5 },
   s2fDeviation: { min: -100, max: 200 },
@@ -232,10 +232,9 @@ export default function Home() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(2, 1fr)",
                 gap: "14px",
               }}
-              className="sm:grid-cols-4"
+              className="grid-cols-2 sm:grid-cols-4"
             >
               {indicators.map((ind) => {
                 const config = thresholds[ind.key];
@@ -294,14 +293,13 @@ export default function Home() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)",
               gap: "1px",
               background: "var(--border-subtle)",
               borderRadius: "var(--radius-lg)",
               overflow: "hidden",
               border: "1px solid var(--border)",
             }}
-            className="sm:grid-cols-4"
+            className="grid-cols-2 sm:grid-cols-4"
           >
             {[
               { value: "4", label: "On-chain indicators" },
@@ -426,14 +424,15 @@ export default function Home() {
             simultaneously, confidence in that reading increases considerably.
           </p>
 
-          <h3>MVRV Z-Score</h3>
+          <h3>MVRV Deviation</h3>
           <p>
-            The Market Value to Realized Value (MVRV) Z-Score compares Bitcoin&apos;s current
-            market capitalization against its &quot;realized cap&quot; — the aggregate value of all
-            coins at the price they last moved on-chain. The Z-Score normalizes this ratio using
-            standard deviations from the historical mean. Values below zero suggest the market is
-            undervalued relative to the cost basis of all holders, historically a buying
-            opportunity. Values above 7 have historically coincided with cycle tops.{" "}
+            The Market Value to Realized Value (MVRV) deviation compares Bitcoin&apos;s current
+            price against its &quot;realized price&quot; — the aggregate cost basis of all coins at
+            the price they last moved on-chain. The gauge shows the deviation, computed as
+            (price − realized price) / realized price (equivalently, the MVRV ratio minus 1).
+            Values below zero suggest the market is undervalued relative to the cost basis of all
+            holders, historically a buying opportunity. Elevated readings have historically
+            coincided with cycle tops.{" "}
             <Link href="/learn/mvrv-z-score-explained">
               Read the full guide &rarr;
             </Link>

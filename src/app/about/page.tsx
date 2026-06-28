@@ -16,7 +16,7 @@ export default function AboutPage() {
     knowsAbout: [
       "Bitcoin Market Cycles",
       "On-Chain Analysis",
-      "MVRV Z-Score",
+      "MVRV (Market Value to Realized Value)",
       "Cryptocurrency Investment",
       "Technical Analysis",
     ],
@@ -183,8 +183,8 @@ export default function AboutPage() {
         <p className="mb-4 leading-relaxed">
           No single indicator tells the complete story. BitcoinCycle Clock
           uses multiple on-chain and price-based signals to triangulate cycle
-          position: <strong>MVRV Z-Score</strong> compares market value to
-          realized value, identifying statistically extreme over- or
+          position: <strong>MVRV Deviation</strong> compares current price to
+          realized price, flagging extreme over- or
           under-valuation; <strong>Pi Cycle Top</strong> uses two moving
           averages whose convergence has historically coincided with cycle
           peaks; <strong>Puell Multiple</strong> measures daily miner revenue

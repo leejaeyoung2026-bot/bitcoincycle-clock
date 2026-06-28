@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     "bitcoin cycle",
     "bitcoin halving",
     "btc cycle clock",
-    "mvrv z-score",
+    "mvrv deviation",
     "pi cycle top",
     "bitcoin indicator",
     "crypto cycle",

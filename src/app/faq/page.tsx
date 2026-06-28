@@ -15,12 +15,12 @@ const faqs = [
   {
     question: "How does the cycle clock work?",
     answer:
-      "The clock maps Bitcoin’s recurring market cycle onto a 12-hour dial. Starting at roughly 6 o’clock with the post-bear Accumulation phase, the hand sweeps through Early Markup, Blow-off Top, and Distribution as the cycle progresses. The hand’s position is determined by a weighted composite of several independent on-chain and price indicators, each contributing its own assessment of where the market stands.",
+      "The clock maps Bitcoin’s recurring market cycle onto a 12-hour dial. Starting at 12 o’clock with the halving and the post-bear Accumulation phase, the hand sweeps through Early Markup, Blow-off Top, and Distribution as the cycle progresses. The hand’s position is determined by the elapsed time since the most recent halving relative to the expected ~1,460-day cycle length — a structural measurement of where you are on the cycle map, not a prediction of price.",
   },
   {
     question: "What indicators does BitcoinCycle Clock use?",
     answer:
-      "BitcoinCycle Clock uses four primary indicators: MVRV Z-Score, Pi Cycle Top, Puell Multiple, and Stock-to-Flow. Each metric captures a different dimension of Bitcoin’s market behavior — valuation, momentum, miner economics, and scarcity. By combining them, the clock reduces the blind spots that any single indicator would have on its own.",
+      "BitcoinCycle Clock uses four primary indicators: MVRV Deviation, Pi Cycle Top, Puell Multiple, and Stock-to-Flow. Each metric captures a different dimension of Bitcoin’s market behavior — valuation, momentum, miner economics, and scarcity. By combining them, the clock reduces the blind spots that any single indicator would have on its own.",
   },
   {
     question: "Is this financial advice?",
@@ -35,12 +35,12 @@ const faqs = [
   {
     question: "Where does the data come from?",
     answer:
-      "Indicator data is sourced from publicly available on-chain analytics APIs and Bitcoin blockchain data. Price data is aggregated from major exchanges. All data is fetched in real time and cached briefly on the client side to reduce redundant network requests. We do not alter or editorialize the raw data in any way.",
+      "Spot price and recent price history are fetched live from the CoinGecko API and cached briefly on the client side to reduce redundant network requests. The on-chain indicators — MVRV Deviation, Pi Cycle Top, Puell Multiple, and Stock-to-Flow — are not freely available in real time from public APIs, so the clock uses pre-computed approximation models that are bundled with the app and based on historical realized-price trends and known issuance schedules. These approximate values are clearly labeled as such on the dashboard.",
   },
   {
-    question: "What is the MVRV Z-Score?",
+    question: "What is the MVRV Deviation gauge?",
     answer:
-      "The MVRV Z-Score compares Bitcoin’s market capitalization to its realized capitalization — the value of all coins priced at the time they last moved on-chain. When the Z-Score is high, it suggests the market is overvalued relative to its aggregate cost basis; when it is low, it suggests undervaluation. Historically, extreme Z-Score readings have coincided with major cycle tops and bottoms.",
+      "The MVRV Deviation gauge compares Bitcoin’s current price to its realized price — the aggregate cost basis of all coins, priced at the time they last moved on-chain. It is computed as (price − realized price) / realized price, which equals the MVRV ratio minus 1. When the deviation is high, it suggests the market is overvalued relative to its aggregate cost basis; when it is low or negative, it suggests undervaluation. Historically, elevated readings have coincided with major cycle tops and low readings with bottoms. The realized-price input here is an approximate bundled model, so the zone bands are heuristic.",
   },
   {
     question: "What is the Pi Cycle Top indicator?",

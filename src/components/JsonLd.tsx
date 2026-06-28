@@ -23,7 +23,7 @@ export default function JsonLd() {
     name: "BitcoinCycle Clock",
     url: "https://cycle.vibed-lab.com",
     description:
-      "Visualize Bitcoin's 4-year halving cycle as an analog clock. Track MVRV Z-Score, Pi Cycle Top, Puell Multiple, and Stock-to-Flow deviation in real time.",
+      "Visualize Bitcoin's 4-year halving cycle as an analog clock. Track MVRV Deviation, Pi Cycle Top, Puell Multiple, and Stock-to-Flow deviation in real time.",
     browserRequirements: "Requires JavaScript",
     applicationCategory: "FinanceApplication",
     author: {

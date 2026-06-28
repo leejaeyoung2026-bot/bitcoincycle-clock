@@ -53,14 +53,16 @@ The track record of the MVRV Z-Score is remarkably consistent.
 The pattern is clear: **Z-Score above 7 signals extreme danger. Z-Score below 0 signals extreme opportunity.** The challenge is always emotional -- buying when the score says buy feels terrible, and selling when it says sell feels premature.
 ## How to Read the MVRV Gauge on BitcoinCycle Clock
 
-On BitcoinCycle Clock, the MVRV Z-Score is visualized as a gauge that moves through colored zones:
+The standard-deviation-normalized Z-Score described above requires a long history of realized-cap data to compute. The gauge on BitcoinCycle Clock uses a simpler, related form: the **MVRV deviation**, computed as (price − realized price) / realized price, which is just the MVRV ratio minus 1. It is not standard-deviation normalized, so its zones live on a smaller scale (roughly −1 up to about 3) rather than the Z-Score scale. The realized-price input is an approximate bundled model, so treat the zone bands as heuristic.
 
-- **Green zone (Z-Score below 1):** Deep value territory. Historically, buying in this zone and holding through the cycle has been extremely profitable. This is where patient accumulators build positions.
-- **Yellow zone (Z-Score 1 to 4):** Fair value to moderately elevated. The market is healthy but no longer cheap. This is where most of the cycle's steady price action occurs -- appreciation without the drama.
-- **Orange zone (Z-Score 4 to 7):** Elevated. Unrealized profits are growing large across the network. Risk is increasing. This is the zone where experienced investors begin scaling out of positions.
-- **Red zone (Z-Score above 7):** Historically associated with cycle tops. Every time the Z-Score has entered this territory, a major correction followed within weeks to months.
+The gauge moves through colored zones, mapped from widely-published MVRV ratio bands (with 1 subtracted to match the deviation):
 
-The gauge updates with on-chain data and provides a real-time snapshot of where Bitcoin sits relative to its aggregate cost basis.
+- **Green zone (deviation below 0):** Undervalued. The price sits below the aggregate cost basis of holders. Historically, buying in this zone and holding through the cycle has been extremely profitable. This is where patient accumulators build positions.
+- **Yellow zone (deviation 0 to 1.4):** Fair value. The market is healthy but no longer cheap. This is where most of the cycle's steady price action occurs -- appreciation without the drama.
+- **Orange zone (deviation 1.4 to 2.2):** Elevated. Unrealized profits are growing large across the network. Risk is increasing. This is the zone where experienced investors begin scaling out of positions.
+- **Red zone (deviation above 2.2):** Overheated. Historically associated with cycle tops, where the MVRV ratio has pushed past roughly 3.2.
+
+The gauge provides a snapshot of where Bitcoin sits relative to its aggregate cost basis.
 
 ## Practical Application: Using MVRV for DCA Timing
 
